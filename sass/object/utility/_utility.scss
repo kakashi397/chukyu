@@ -1,0 +1,8 @@
+@use '../../foundation/mixin' as *;
+
+/* ユーティリティ */
+.u-only-sp {
+  @include media(l) {
+    display: none;
+  }
+}

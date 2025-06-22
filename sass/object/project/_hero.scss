@@ -1,0 +1,44 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixin' as *;
+
+/* ヒーロー */
+.p-hero {
+  text-align: center;
+  background-color: $sub;
+  background: linear-gradient(to right, $main, $sub);
+  &__inner {
+    padding-top: clamp-rem(375, 40, 1536, 84);
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+  }
+  &__text {
+    font-size: clamp-rem(375, 14, 1536, 20);
+    line-height: 1.5;
+    &--last {
+      line-height: 1.8;
+      margin-bottom: clamp-rem(375, 15, 1536, 37);
+
+    }
+  }
+  &__catch {
+    margin-top: clamp-rem(375, 18, 1536, 11);
+    margin-bottom: clamp-rem(375, 24, 1536, 15);
+    font-size: clamp-rem(375, 24, 1536, 56);
+    font-weight: 700;
+    line-height: 1.8;
+    text-align: left;
+    display: inline-block;
+  }
+  &__caution {
+    font-size: rem(12);
+    text-align: left;
+    line-height: 1;
+    &--first {
+      margin-bottom: rem(7);
+    }
+  }
+}

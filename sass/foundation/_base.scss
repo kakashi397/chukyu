@@ -1,3 +1,6 @@
+@use '../foundation/variables' as *;
+@use '../foundation/mixin' as *;
+
 /* ベース */
 a {
   text-decoration: none;
@@ -14,4 +17,10 @@ body {
 }
 li {
   list-style: none;
+}
+main {
+  padding-top: $header-height;
+  @include media(l) {
+    padding-top: $header-height-pc;
+  }
 }

@@ -10,7 +10,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    &__list {
+    &__lists {
       display: flex;
       align-items: center;
       gap: clamp-rem(991, 10, 1980, 133);
