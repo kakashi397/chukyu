@@ -1,1 +1,7 @@
 @use "setting";
+@use './layout/header';
+@use './layout/wrapper';
+@use './object/component/logo';
+@use './object/component/request-btn';
+@use './object/component/hamburger-btn';
+@use './object/component/nav-pc';

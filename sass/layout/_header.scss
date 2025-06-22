@@ -1,0 +1,22 @@
+@use '../foundation/functions' as *;
+@use '../foundation/variables' as *;
+@use '../foundation/mixin' as *;
+
+/* ヘッダー */
+.l-header {
+  width: 100%;
+  height: $header-height;
+  position: fixed;
+  @include media(l) {
+    height: $header-height-pc;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    
+  }
+  &__btns-wrapper {
+    display: flex;
+    margin-left: auto;
+  }
+}

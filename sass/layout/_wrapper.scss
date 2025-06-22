@@ -1,0 +1,6 @@
+@use '../foundation/functions' as *;
+
+/* ラッパー */
+.l-header-wrapper {
+  padding-left: clamp-rem(375, 16, 1536, 20);
+}
