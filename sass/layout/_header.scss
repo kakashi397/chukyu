@@ -11,9 +11,10 @@
     height: $header-height-pc;
   }
   &__inner {
+    padding-left: clamp-rem(375, 16, 1536, 20);
     display: flex;
     align-items: center;
-    
+    position: relative;
   }
   &__btns-wrapper {
     display: flex;

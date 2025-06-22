@@ -4,14 +4,20 @@
 
 /* PCナビ */
 .c-nav-pc {
-  margin: auto;
-  &__list {
-    display: flex;
-    align-items: center;
-    gap: rem(28);
-  }
-  &__item {
-    font-weight: 700;
-    color: $main;
+  display: none;
+  @include media(l) {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: clamp-rem(991, 10, 1536, 28);
+    }
+    &__item {
+      font-weight: 700;
+      color: $main;
+    }
   }
 }
