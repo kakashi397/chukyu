@@ -1,0 +1,23 @@
+@use '../foundation/functions' as *;
+
+/* ラッパー */
+.l-header-wrapper {
+  max-width: rem(1980);
+  margin: auto;
+}
+.l-hero-wrapper {
+  padding-right: rem(16);
+  padding-left: rem(16);
+}
+.l-hero__catch-wrapper {
+  text-align: center;
+}
+.l-stat-circle-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.l-hero__caution-wrapper {
+  width: rem(300);
+  display: flex;
+  flex-direction: column;
+}

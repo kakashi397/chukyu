@@ -1,0 +1,23 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixin' as *;
+
+/* PCナビ */
+.c-nav-pc {
+  display: none;
+  @include media(l) {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    &__lists {
+      display: flex;
+      align-items: center;
+      gap: clamp-rem(991, 10, 1980, 133);
+    }
+    &__item {
+      font-weight: 700;
+      color: $main;
+    }
+  }
+}

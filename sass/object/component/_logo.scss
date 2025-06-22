@@ -1,0 +1,6 @@
+@use '../../foundation/functions' as *;
+
+/* ロゴ */
+.c-logo {
+  width: clamp-rem(375, 139, 1536, 227);
+}

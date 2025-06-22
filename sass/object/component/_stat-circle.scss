@@ -1,0 +1,37 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixin' as *;
+
+/* ヒーロー白丸 */
+.c-stat-circle {
+  display: flex;
+  gap: clamp-rem(375, 4, 1536, 22);
+  margin-bottom: clamp-rem(375, 24, 1536, 27);
+  &__item {
+    background-color: $white;
+    border: 1px solid $main;
+    border-radius: 50%;
+    width: clamp-rem(375, 112, 1536, 164);
+    height: clamp-rem(375, 112, 1536, 164);
+    padding-top: clamp-rem(375, 29, 1536, 41);
+  }
+  &__head {
+    color: $main;
+    font-size: clamp-rem(375, 16, 1536, 24);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: clamp-rem(375, 17, 1536, 26);
+  }
+  &__data {
+    color: $main;
+    font-size: clamp-rem(375, 18, 1536, 32);
+    font-weight: 700;
+    line-height: 1;
+  }
+  &__caution {
+    color: $black;
+    font-size: rem(12);
+    font-weight: 700;
+    vertical-align: super;
+  }
+}
