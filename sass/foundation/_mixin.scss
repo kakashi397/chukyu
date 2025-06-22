@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+// メディアクエリ用ブレイクポイント定義
+$breakpoints: (
+  xs: "(min-width: 320px)",
+  s : "(min-width: 575px)",
+  m : "(min-width: 767px)",
+  l : "(min-width: 991px)",
+  xl: "(min-width: 1199px)",
+);
+
+@mixin media ($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media #{map.get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+  @else {
+    @error "$breakpoints に #{$breakpoint} ってキーは無いぜ";
+  }
+}
