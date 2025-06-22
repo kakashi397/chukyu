@@ -1,6 +1,7 @@
 @use '../foundation/functions' as *;
 
 /* ラッパー */
-// .l-header-wrapper {
-//   padding-left: clamp-rem(375, 16, 1536, 20);
-// }
+.l-header-wrapper {
+  max-width: rem(1980);
+  margin: auto;
+}
