@@ -21,7 +21,6 @@
     &--last {
       line-height: 1.8;
       margin-bottom: clamp-rem(375, 15, 1536, 37);
-
     }
   }
   &__catch {
@@ -34,6 +33,7 @@
     display: inline-block;
   }
   &__caution {
+    width: rem(300);
     font-size: rem(12);
     text-align: left;
     line-height: 1;
