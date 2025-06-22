@@ -1,0 +1,30 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/variables' as *;
+@use '../../foundation/mixin' as *;
+
+/* ナビSP */
+.c-nav-sp {
+  width: 100vw;
+  height: 100vh;
+  background-color: $main;
+  position: fixed;
+  z-index: 9999;
+  top: $header-height;
+  &__item {
+    font-weight: 700;
+    color: $white;
+    border-bottom: 1px solid $white;
+    display: flex;
+    height: rem(64);
+    align-items: center;
+    padding-left: rem(16);
+  }
+  &__img {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: rem(12);
+  }
+  @include media(l) {
+    display: none; // PCでは非表示
+  }
+}
