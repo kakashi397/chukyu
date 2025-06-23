@@ -19,6 +19,8 @@
 .l-stat-circle-wrapper {
   display: flex;
   justify-content: center;
+  gap: clamp-rem(375, 4, 1536, 22);
+  margin-bottom: clamp-rem(375, 24, 1536, 27);
 }
 .l-hero__caution-wrapper {
   display: flex;
