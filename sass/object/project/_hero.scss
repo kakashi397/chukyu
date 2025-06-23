@@ -4,7 +4,7 @@
 
 /* ヒーロー */
 .p-hero {
-  text-align: center;
+  // text-al：gn： center;
   background-color: $sub;
   background: linear-gradient(to right, $main, $sub);
   &__inner {
@@ -16,6 +16,7 @@
     color: $white;
   }
   &__text {
+    text-align: center;
     font-size: clamp-rem(375, 14, 1536, 20);
     line-height: 1.5;
     &--last {
@@ -31,14 +32,5 @@
     line-height: 1.8;
     text-align: left;
     display: inline-block;
-  }
-  &__caution {
-    width: rem(300);
-    font-size: rem(12);
-    text-align: left;
-    line-height: 1;
-    &--first {
-      margin-bottom: rem(7);
-    }
   }
 }

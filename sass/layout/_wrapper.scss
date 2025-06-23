@@ -12,6 +12,7 @@
 .l-hero-wrapper {
   padding-right: rem(16);
   padding-left: rem(16);
+
 }
 .l-hero__catch-wrapper {
   text-align: center;
@@ -22,7 +23,7 @@
   gap: clamp-rem(375, 4, 1536, 22);
   margin-bottom: clamp-rem(375, 24, 1536, 27);
 }
-.l-hero__caution-wrapper {
+.l-stat-circle__caution-wrapper {
   display: flex;
   flex-direction: column;
 }

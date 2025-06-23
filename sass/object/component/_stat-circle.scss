@@ -4,12 +4,17 @@
 
 /* ヒーロー白丸 */
 .c-stat-circle {
+  width: max-content;
+  margin: 0 auto;
+  &__item {
   background-color: $white;
   border: 1px solid $main;
   border-radius: 50%;
   width: clamp-rem(375, 112, 1536, 164);
   height: clamp-rem(375, 112, 1536, 164);
   padding-top: clamp-rem(375, 29, 1536, 41);
+  text-align: center;
+  }
   &__head {
     color: $main;
     font-size: clamp-rem(375, 16, 1536, 24);
@@ -23,9 +28,16 @@
     font-weight: 700;
     line-height: 1;
   }
-  &__caution {
+  &__sup {
     color: $black;
     font-size: rem(11);
     font-weight: 700;
+  }
+  &__caution {
+    font-size: rem(12);
+    line-height: 1;
+    &--first {
+      margin-bottom: rem(7);
+    }
   }
 }
