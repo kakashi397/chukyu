@@ -15,45 +15,47 @@
   <script defer src="js/script.js"></script>
 </head>
 <body>
-  <header class="l-header l-header-wrapper">
-    <div class="l-header__inner">
-      <h1 class="c-logo">
-        <a href="index.html" class="c-logo__link">
-          <img class="c-logo__img" src="img/logo.svg" alt="CareSend | 有資格介護人材が集まる介護派遣サービス">
-        </a>
-      </h1>
-      <nav class="c-nav-pc">
-        <ul class="c-nav-pc__lists">
-          <li class="c-nav-pc__item">
-            <a href="" class="c-nav-pc__link">CareSendについて</a><!-- 遷移先を忘れずに記入すること -->
-          <li class="c-nav-pc__item">
-            <a href="" class="c-nav-pc__link">CareSendの特徴</a><!-- 遷移先を忘れずに記入すること -->
-          <li class="c-nav-pc__item">
-            <a href="" class="c-nav-pc__link">導入事例</a><!-- 遷移先を忘れずに記入すること -->
-          <li class="c-nav-pc__item">
-            <a href="" class="c-nav-pc__link">料金</a><!-- 遷移先を忘れずに記入すること -->
-          <li class="c-nav-pc__item">
-            <a href="" class="c-nav-pc__link">よくある質問</a><!-- 遷移先を忘れずに記入すること -->
-          </li>
-        </ul>
-      </nav>
-      <div class="l-header__btns-wrapper">
-        <a href="" class="c-request-btn__link"><!-- 遷移先を忘れずに記入すること -->
-          <div class="c-request-btn">
-            <div class="c-request-btn__inner">
-              <img src="img/mail.svg" alt="資料請求する" class="c-request-btn__img">
-              <span class="c-request-btn__text">資料請求</span>
+  <header class="l-header">
+    <div class="l-header-wrapper">
+      <div class="l-header__inner">
+        <h1 class="c-logo">
+          <a href="index.html" class="c-logo__link">
+            <img class="c-logo__img" src="img/logo.svg" alt="CareSend | 有資格介護人材が集まる介護派遣サービス">
+          </a>
+        </h1>
+        <nav class="c-nav-pc">
+          <ul class="c-nav-pc__lists">
+            <li class="c-nav-pc__item">
+              <a href="" class="c-nav-pc__link">CareSendについて</a><!-- 遷移先を忘れずに記入すること -->
+            <li class="c-nav-pc__item">
+              <a href="" class="c-nav-pc__link">CareSendの特徴</a><!-- 遷移先を忘れずに記入すること -->
+            <li class="c-nav-pc__item">
+              <a href="" class="c-nav-pc__link">導入事例</a><!-- 遷移先を忘れずに記入すること -->
+            <li class="c-nav-pc__item">
+              <a href="" class="c-nav-pc__link">料金</a><!-- 遷移先を忘れずに記入すること -->
+            <li class="c-nav-pc__item">
+              <a href="" class="c-nav-pc__link">よくある質問</a><!-- 遷移先を忘れずに記入すること -->
+            </li>
+          </ul>
+        </nav>
+        <div class="l-header__btns-wrapper">
+          <a href="" class="c-request-btn__link"><!-- 遷移先を忘れずに記入すること -->
+            <div class="c-request-btn">
+              <div class="c-request-btn__inner">
+                <img src="img/mail.svg" alt="資料請求する" class="c-request-btn__img">
+                <span class="c-request-btn__text">資料請求</span>
+              </div>
             </div>
-          </div>
-        </a>
-        <button class="c-hamburger-btn js-hamburger-btn is-active" aria-label="メニューを開く">
-          <div class="c-hamburger-btn__lines">
-            <span class="c-hamburger-btn__line"></span>
-            <span class="c-hamburger-btn__line"></span>
-            <span class="c-hamburger-btn__line"></span>
-          </div>
-          <span class="c-hamburger-btn__text">メニュー</span>
-        </button>
+          </a>
+          <button class="c-hamburger-btn js-hamburger-btn is-active" aria-label="メニューを開く">
+            <div class="c-hamburger-btn__lines">
+              <span class="c-hamburger-btn__line"></span>
+              <span class="c-hamburger-btn__line"></span>
+              <span class="c-hamburger-btn__line"></span>
+            </div>
+            <span class="c-hamburger-btn__text">メニュー</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -106,12 +108,23 @@
               </div>
             </div>
           </div>
-          <div class="c-request-form">
-        
+          <div class="l-hero__img-wrapper">
+            <img src="img/job-listing.png" alt="求人情報を精査している人物のイラスト" class="p-hero__img" loading="lazy" width="720" height="404">
           </div>
-          <div class="p-hero__img-wrapper">
-            <img src="img/job-listing.png" alt="求人情報を精査している人物のイラスト" class="p-hero__img">
-          </div>
+          <form class="c-request-form l-request-form-wrapper" id="request-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSepeLgVFEOFN-Tdo9C3D5I__mDZG8jGh-URO-y6HHiFz_q_Qw/formResponse">
+            <label for="last-name">姓<sup class="c-request-form__caution">*</sup></label>
+            <input type="text" id="last-name" name="entry.2008734779" required placeholder="介護">
+            <label for="first-name">名<sup class="c-request-form__caution">*</sup></label>
+            <input type="text" id="first-name" name="entry.1711133428" required placeholder="太郎">
+            <label for="company">会社名<sup class="c-request-form__caution">*</sup></label>
+            <input type="text" id="company" name="entry.1095440439" required placeholder="株式会社CareSend">
+            <label for="email">メールアドレス<sup class="c-request-form__caution">*</sup></label>
+            <input type="email" id="email" name="entry.1060766295" required placeholder="caresend@caresend.com">
+            <label for="tel">電話番号<sup class="c-request-form__caution">*</sup></label>
+            <input type="text" id="tel" name="entry.1000792723" required inputmode="tel" pattern="[\d\-]*" placeholder="000-0000-0000" autocomplete="tel" aria-label="電話番号">
+            <p class="c-request-form__text">このフォームから送信された情報は、 プライバシーポリシー に基づいて処理されます。</p>
+            <input type="submit" class="c-request-btn">
+          </form>
         </div>
       </div>
     </section>
@@ -120,5 +133,27 @@
   <footer>
 
   </footer>
+
+  <script>
+  const form = document.getElementById('request-form');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // ページ遷移を防ぐ！
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      mode: 'no-cors', // ←これが重要（GoogleフォームはCORS許可してない）
+      body: formData
+    }).then(() => {
+      alert('送信しました！');
+      form.reset(); // フォームのリセット（任意）
+    }).catch(() => {
+      alert('送信に失敗しました。');
+    });
+  });
+</script>
+
 </body>
 </html>

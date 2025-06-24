@@ -12,7 +12,6 @@
 .l-hero-wrapper {
   padding-right: rem(16);
   padding-left: rem(16);
-
 }
 .l-hero__catch-wrapper {
   text-align: center;
@@ -27,3 +26,9 @@
   display: flex;
   flex-direction: column;
 }
+.l-hero__img-wrapper {
+  margin-right: rem(-9);
+  margin-left: rem(-8);
+  text-align: center;
+}
+// .l-request-form-wrapper
