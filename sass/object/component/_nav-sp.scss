@@ -24,6 +24,7 @@
     display: inline-block;
     vertical-align: bottom;
     margin-right: rem(12);
+    margin-bottom: 0;
   }
   @include media(l) {
     display: none; // PCでは非表示
