@@ -16,7 +16,7 @@
     border-radius: rem(5);
   }
   &__body {
-    margin-top: rem(20);
+    margin-top: rem(25);
   }
   &__group {
     display: flex;
@@ -28,6 +28,7 @@
   &__label {
     font-size: rem(14);
     font-weight: 700;
+    line-height: 1;
     color: $black;
   }
   &__input {
@@ -37,5 +38,6 @@
   }
   &__caution {
     color: $caution;
+    vertical-align: -2px;
   }
 }
