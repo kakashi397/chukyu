@@ -38,6 +38,6 @@
   }
   &__caution {
     color: $caution;
-    vertical-align: -2px;
+    vertical-align: rem(-2);//本当はもっと美しい方法で文字とSUPを上辺揃いにしたいが暫定的対処
   }
 }
