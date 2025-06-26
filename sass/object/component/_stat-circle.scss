@@ -7,20 +7,29 @@
   width: max-content;
   margin-inline: auto;
   &__item {
-  background-color: $white;
-  border: 1px solid $main;
-  border-radius: 50%;
-  width: clamp-rem(375, 112, 1536, 164);
-  height: clamp-rem(375, 112, 1536, 164);
-  padding-top: clamp-rem(375, 29, 1536, 41);
-  text-align: center;
+    background-color: $white;
+    border: 1px solid $main;
+    border-radius: 50%;
+    width: clamp-rem(320, 90, 375, 112);
+    height: clamp-rem(320, 90, 375, 112);
+    padding-top: rem(20);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: clamp-rem(320, 10, 375, 17);
+    @include media(s) {
+      width: clamp-rem(375, 112, 1536, 164);
+      height: clamp-rem(375, 112, 1536, 164);
+      padding-top: clamp-rem(375, 29, 1536, 41);
+      gap: clamp-rem(375, 17, 1536, 26);
+    }
   }
   &__head {
     color: $main;
     font-size: clamp-rem(375, 16, 1536, 24);
     font-weight: 700;
     line-height: 1;
-    margin-bottom: clamp-rem(375, 17, 1536, 26);
+    // margin-bottom: clamp-rem(375, 17, 1536, 26);
   }
   &__data {
     color: $main;

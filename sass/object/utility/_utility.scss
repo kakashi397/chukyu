@@ -6,3 +6,8 @@
     display: none;
   }
 }
+.u-only-xs {
+  @include media(s) {
+    display: none;
+  }
+}

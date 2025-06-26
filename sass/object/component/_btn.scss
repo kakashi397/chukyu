@@ -1,0 +1,15 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+
+/* ボタン */
+.c-btn {
+  font-weight: 700;
+  border-radius: rem(25);
+  &--submit {
+    background-color: $main;
+    color: $white;
+    line-height: 1;
+    padding: rem(13) rem(27);
+  }
+}

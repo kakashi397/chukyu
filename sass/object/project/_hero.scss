@@ -4,11 +4,12 @@
 
 /* ヒーロー */
 .p-hero {
-  // text-al：gn： center;
-  background-color: $sub;
   background: linear-gradient(to right, $main, $sub);
   &__inner {
     padding-top: clamp-rem(375, 40, 1536, 84);
+    // @include media(m) {
+    //   display: flex;
+    // }
   }
   &__description {
     display: flex;
