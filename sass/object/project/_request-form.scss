@@ -20,24 +20,41 @@
   }
   &__group {
     display: flex;
+    gap: rem(9);
   }
   &__item {
     display: flex;
     flex-direction: column;
+    margin-bottom: rem(14.3);
+    &--last {
+    margin-bottom: rem(24);
+    }
   }
   &__label {
     font-size: rem(14);
     font-weight: 700;
     line-height: 1;
     color: $black;
+    margin-bottom: rem(8);
   }
   &__input {
+    background-color: $form-background;
+    border: 1px solid $form-border;
+    border-radius: rem(5);
+    color: $form-placeholder;
+    line-height: 1;
+    padding: rem(12) rem(8);
     &--name {
-      width: 159px;//この数値は親を飛び出さなための暫定的な数字です
+      width: rem(159);
     }
   }
   &__caution {
     color: $caution;
     vertical-align: rem(-2);//本当はもっと美しい方法で文字とSUPを上辺揃いにしたいが暫定的対処
+  }
+  &__text {
+    font-size: rem(12);
+    line-height: 1.5;
+    color: $black;
   }
 }
