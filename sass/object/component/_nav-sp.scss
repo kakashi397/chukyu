@@ -5,7 +5,7 @@
 /* ナビSP */
 .c-nav-sp {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background-color: $main;
   position: fixed;
   z-index: 9999;
@@ -24,6 +24,7 @@
     display: inline-block;
     vertical-align: bottom;
     margin-right: rem(12);
+    margin-bottom: 0;
   }
   @include media(l) {
     display: none; // PCでは非表示

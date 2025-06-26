@@ -5,6 +5,10 @@
   max-width: rem(1980);
   margin: auto;
 }
+.l-header__btns-wrapper {
+  display: flex;
+  margin-left: auto;
+  }
 .l-hero-wrapper {
   padding-right: rem(16);
   padding-left: rem(16);
@@ -15,9 +19,19 @@
 .l-stat-circle-wrapper {
   display: flex;
   justify-content: center;
+  gap: clamp-rem(375, 4, 1536, 22);
+  margin-bottom: clamp-rem(375, 24, 1536, 27);
 }
-.l-hero__caution-wrapper {
-  width: rem(300);
+.l-stat-circle__caution-wrapper {
   display: flex;
   flex-direction: column;
+}
+.l-hero__img-wrapper {
+  margin-right: rem(-9);
+  margin-bottom: rem(38);
+  margin-left: rem(-8);
+  text-align: center;
+}
+.l-btn-wrapper {
+  text-align: center;
 }

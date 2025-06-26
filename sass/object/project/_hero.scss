@@ -4,24 +4,26 @@
 
 /* ヒーロー */
 .p-hero {
-  text-align: center;
-  background-color: $sub;
   background: linear-gradient(to right, $main, $sub);
   &__inner {
     padding-top: clamp-rem(375, 40, 1536, 84);
+    // @include media(m) {
+    //   display: flex;
+    // }
   }
   &__description {
     display: flex;
     flex-direction: column;
     color: $white;
+    margin-bottom: rem(-13);
   }
   &__text {
+    text-align: center;
     font-size: clamp-rem(375, 14, 1536, 20);
     line-height: 1.5;
     &--last {
       line-height: 1.8;
       margin-bottom: clamp-rem(375, 15, 1536, 37);
-
     }
   }
   &__catch {
@@ -33,12 +35,8 @@
     text-align: left;
     display: inline-block;
   }
-  &__caution {
-    font-size: rem(12);
-    text-align: left;
-    line-height: 1;
-    &--first {
-      margin-bottom: rem(7);
-    }
+  &__img {
+    display: inline-block;
+    max-width: rem(500);
   }
 }
