@@ -17,6 +17,18 @@
     text-align: center;
     padding: rem(18) rem(20);
     border-radius: rem(5);
+    position: relative;
+    &::after {
+      content: "";
+      width: 17px;
+      height: 16px;
+      background-color: $main;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     @include media(s) {
       text-align: left;
     }
