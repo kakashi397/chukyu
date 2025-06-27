@@ -1,0 +1,8 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+
+/* アチーブメントセクション */
+.p-achievement {
+  padding-top: clamp-rem(375, 40, 1536, 80);
+}

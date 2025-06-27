@@ -19,7 +19,7 @@
   margin-bottom: rem(38);
   margin-left: rem(-8);
   text-align: center;
-  @include media(l) {
+  @include media(xl) {
     position: absolute;
     bottom: rem(-4);
     left: 50%;
@@ -42,4 +42,8 @@
 }
 .l-btn-wrapper {
   text-align: center;
+}
+.l-achievement-wrapper {
+  padding-right: rem(16);
+  padding-left: rem(16);
 }
