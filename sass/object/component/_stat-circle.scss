@@ -6,6 +6,12 @@
 .c-stat-circle {
   width: max-content;
   margin-inline: auto;
+  @include media(l) {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: rem(5);
+  }
   &__item {
     background-color: $white;
     border: 1px solid $main;
@@ -29,24 +35,36 @@
     font-size: clamp-rem(375, 16, 1536, 24);
     font-weight: 700;
     line-height: 1;
-    // margin-bottom: clamp-rem(375, 17, 1536, 26);
   }
   &__data {
     color: $main;
     font-size: clamp-rem(375, 18, 1536, 32);
     font-weight: 700;
     line-height: 1;
+    &--last {
+      @include media(l) {
+        display: block;
+        width: 121px;
+        margin-left: clamp-rem(767, 10, 1536, 27);
+      }
+    }
   }
   &__sup {
     color: $black;
-    font-size: rem(11);
+    font-size: rem(12);
     font-weight: 700;
+    @include media(m) {
+      vertical-align: rem(15);
+    }
   }
   &__caution {
     font-size: rem(12);
     line-height: 1;
     &--first {
       margin-bottom: rem(7);
+    }
+    @include media(l) {
+      margin-left: rem(-5);
     }
   }
 }

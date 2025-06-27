@@ -9,13 +9,18 @@
   border-radius: rem(5);
   max-width: rem(343);
   margin-inline: auto;
+  @include media(l) {
+    margin-inline: 0;
+    max-width: rem(400);
+    padding: rem(8) rem(16) rem(28);
+  }
   &__title {
     background-color: $main;
     color: $white;
     line-height: 1;
     font-weight: 700;
     text-align: center;
-    padding: rem(18) rem(20);
+    padding: rem(8) rem(20);
     border-radius: rem(5);
     position: relative;
     &::after {
@@ -31,14 +36,29 @@
     }
     @include media(s) {
       text-align: left;
+      padding: rem(18) rem(20);
+    }
+    @include media(l) {
+      font-size: rem(20);
+      padding-top: rem(16);
+      padding-right: rem(15);
+      padding-bottom: rem(16);
+      padding-left: rem(14);
+      margin: 0 rem(-8);
     }
   }
   &__body {
     margin-top: rem(25);
+    @include media(l) {
+      margin-top: rem(24);
+    }
   }
   &__group {
     display: flex;
     gap: rem(9);
+    @include media(l) {
+      gap: rem(18);
+    }
   }
   &__item {
     display: flex;
@@ -54,6 +74,19 @@
     line-height: 1;
     color: $black;
     margin-bottom: rem(8);
+    &--last-name {
+      margin-left: rem(-1);
+      @include media(l) {
+        margin-left: 0;
+      }
+    }
+    &--email,
+    &--tel {
+      margin-left: rem(1);
+      @include media(l) {
+        margin-left: 0;
+      }
+    }
   }
   &__input {
     background-color: $form-background;
@@ -65,15 +98,33 @@
     &--name {
       width: 100%;
     }
+    &--tel {
+      margin-right: rem(-1);
+      margin-left: rem(1);
+      @include media(l) {
+        padding-left: rem(7);
+      }
+    }
   }
   &__caution {
     color: $caution;
     vertical-align: rem(-2);//本当はもっと美しい方法で文字とSUPを上辺揃いにしたいが暫定的対処
+    @include media(l) {
+      vertical-align: rem(-3);
+    }
   }
   &__text {
     font-size: rem(12);
     line-height: 1.5;
     color: $black;
+    margin-right: rem(-1);
     margin-bottom: rem(40);
+    margin-left: rem(1);
+    @include media(l) {
+      font-size: rem(14);
+      margin-right: 0;
+      margin-bottom: rem(31);
+      margin-left: 0;
+    }
   }
 }

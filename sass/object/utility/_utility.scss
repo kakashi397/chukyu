@@ -1,13 +1,27 @@
 @use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+@use '../../foundation/functions' as *;
 
 /* ユーティリティ */
 .u-only-sp {
-  @include media(l) {
+  @include media(m) {
     display: none;
   }
 }
 .u-only-xs {
   @include media(s) {
     display: none;
+  }
+}
+.u-only-pc {
+  display: none;
+  @include media(m) {
+    display: block;
+  }
+}
+.u-pc-fz24 {
+  display: inline;
+  @include media(m) {
+    font-size: rem(24);
   }
 }

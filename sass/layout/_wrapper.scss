@@ -1,4 +1,5 @@
 @use '../foundation/functions' as *;
+@use '../foundation/mixin' as *;
 
 /* ラッパー */
 .l-header-wrapper {
@@ -13,6 +14,19 @@
   padding-right: rem(16);
   padding-left: rem(16);
 }
+.l-hero__img-wrapper {
+  margin-right: rem(-9);
+  margin-bottom: rem(38);
+  margin-left: rem(-8);
+  text-align: center;
+  @include media(xl) {
+    position: absolute;
+    bottom: rem(-4);
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+}
 .l-hero__catch-wrapper {
   text-align: center;
 }
@@ -26,12 +40,10 @@
   display: flex;
   flex-direction: column;
 }
-.l-hero__img-wrapper {
-  margin-right: rem(-9);
-  margin-bottom: rem(38);
-  margin-left: rem(-8);
-  text-align: center;
-}
 .l-btn-wrapper {
   text-align: center;
+}
+.l-achievement-wrapper {
+  padding-right: rem(16);
+  padding-left: rem(16);
 }

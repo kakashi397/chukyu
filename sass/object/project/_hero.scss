@@ -5,11 +5,18 @@
 /* ヒーロー */
 .p-hero {
   background: linear-gradient(to right, $main, $sub);
+  position: relative;
   &__inner {
     padding-top: clamp-rem(375, 40, 1536, 84);
-    // @include media(m) {
-    //   display: flex;
-    // }
+    padding-bottom: rem(26);
+    @include media(l) {
+      display: flex;
+      justify-content: space-between;
+      max-width: rem(1200);
+      margin-inline: auto;
+      padding-left: rem(24);
+      padding-bottom: rem(84);
+    }
   }
   &__description {
     display: flex;
@@ -21,22 +28,33 @@
     text-align: center;
     font-size: clamp-rem(375, 14, 1536, 20);
     line-height: 1.5;
+    @include media(l) {
+      text-align: left;
+    }
     &--last {
       line-height: 1.8;
       margin-bottom: clamp-rem(375, 15, 1536, 37);
+      @include media(l) {
+        line-height: 1.5;
+      }
     }
   }
   &__catch {
-    margin-top: clamp-rem(375, 18, 1536, 11);
-    margin-bottom: clamp-rem(375, 24, 1536, 15);
+    margin-top: rem(18);
+    margin-bottom: rem(24);
     font-size: clamp-rem(375, 24, 1536, 56);
     font-weight: 700;
     line-height: 1.8;
     text-align: left;
     display: inline-block;
+    @include media(l) {
+      line-height: 1.5;
+      margin-top: rem(11);
+      margin-bottom: rem(15);
+    }
   }
   &__img {
     display: inline-block;
-    max-width: rem(500);
+    max-width: rem(360);
   }
 }

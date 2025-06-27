@@ -1,0 +1,14 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+
+/* セクションタイトル */
+.c-section-title {
+  font-size: clamp-rem(320, 17, 375, 20);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  @include media(s) {
+    font-size: clamp-rem(375, 20, 1536, 32);
+  }
+}
