@@ -27,6 +27,8 @@
     flex-wrap: nowrap; // 保険のひとこと
     width: max-content;
     animation: scroll-left 30s linear infinite; // scroll-leftの定義はfoundation/_keyframes.scssで行っている
+    transform: translateX(0);
+    --scroll-end: -50%; // これは仮の数字で、実際にはJSから値が代入される
   }
   &__logo-item {
     width: clamp-rem(375, 160, 1536, 248);
