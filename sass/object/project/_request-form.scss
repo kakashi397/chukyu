@@ -9,6 +9,9 @@
   border-radius: rem(5);
   max-width: rem(343);
   margin-inline: auto;
+  @include media(m) {
+    margin-inline: 0;
+  }
   &__title {
     background-color: $main;
     color: $white;

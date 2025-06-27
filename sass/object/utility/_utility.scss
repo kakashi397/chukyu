@@ -1,4 +1,6 @@
 @use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+@use '../../foundation/functions' as *;
 
 /* ユーティリティ */
 .u-only-sp {
@@ -9,5 +11,11 @@
 .u-only-xs {
   @include media(s) {
     display: none;
+  }
+}
+.u-only-pc {
+  display: inline;
+  @include media(m) {
+    font-size: rem(24);
   }
 }
