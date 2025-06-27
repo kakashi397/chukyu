@@ -47,3 +47,6 @@
   padding-right: rem(16);
   padding-left: rem(16);
 }
+.l-achievement__metrics-wrapper {
+  margin-top: clamp-rem(375, 30, 1536, 40);
+}
