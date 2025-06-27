@@ -4,7 +4,7 @@
 
 /* ユーティリティ */
 .u-only-sp {
-  @include media(l) {
+  @include media(m) {
     display: none;
   }
 }
@@ -14,6 +14,12 @@
   }
 }
 .u-only-pc {
+  display: none;
+  @include media(m) {
+    display: block;
+  }
+}
+.u-pc-fz24 {
   display: inline;
   @include media(m) {
     font-size: rem(24);

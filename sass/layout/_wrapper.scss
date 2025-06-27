@@ -22,7 +22,7 @@
   @include media(m) {
     position: absolute;
     bottom: 0;
-    right: 1px;//作業中邪魔なので右に移動しているだけ
+    left: 1px;//作業中邪魔なので移動しているだけ
     margin: 0;
   }
 }
