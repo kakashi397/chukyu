@@ -9,12 +9,13 @@
   &__inner {
     padding-top: clamp-rem(375, 40, 1536, 84);
     padding-bottom: rem(26);
-    @include media(m) {
+    @include media(l) {
       display: flex;
-      gap: rem(161);
+      gap: clamp-rem(991, 40, 1536, 161);
       max-width: rem(1200);
       margin-inline: auto;
       padding-left: rem(24);
+      padding-bottom: rem(84);
     }
   }
   &__description {
@@ -27,13 +28,13 @@
     text-align: center;
     font-size: clamp-rem(375, 14, 1536, 20);
     line-height: 1.5;
-    @include media(m) {
+    @include media(l) {
       text-align: left;
     }
     &--last {
       line-height: 1.8;
       margin-bottom: clamp-rem(375, 15, 1536, 37);
-      @include media(m) {
+      @include media(l) {
         line-height: 1.5;
       }
     }
@@ -46,7 +47,7 @@
     line-height: 1.8;
     text-align: left;
     display: inline-block;
-    @include media(m) {
+    @include media(l) {
       line-height: 1.5;
       margin-top: rem(11);
       margin-bottom: rem(15);
@@ -54,6 +55,6 @@
   }
   &__img {
     display: inline-block;
-    max-width: rem(500);
+    max-width: rem(360);
   }
 }

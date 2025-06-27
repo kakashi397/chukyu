@@ -6,7 +6,7 @@
 .c-stat-circle {
   width: max-content;
   margin-inline: auto;
-  @include media(m) {
+  @include media(l) {
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
@@ -42,7 +42,7 @@
     font-weight: 700;
     line-height: 1;
     &--last {
-      @include media(m) {
+      @include media(l) {
         display: block;
         width: 121px;
         margin-left: clamp-rem(767, 10, 1536, 27);
@@ -63,7 +63,7 @@
     &--first {
       margin-bottom: rem(7);
     }
-    @include media(m) {
+    @include media(l) {
       margin-left: rem(-5);
     }
   }
