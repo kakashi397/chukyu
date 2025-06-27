@@ -1,11 +1,11 @@
-/* カルーセル */
-window.addEventListener('DOMContentLoaded', () => {
-  const track = document.querySelector('.js-logo-track');
+// /* カルーセル */
+// window.addEventListener('DOMContentLoaded', () => {
+//   const track = document.querySelector('.js-logo-track');
 
-  if(!track) return;
+//   if(!track) return;
 
-  const oneSetWidth = track.scrollWidth / 2;
-  console.log('1セットの幅:', oneSetWidth);
-  track.style.setProperty('--scroll-end', `-${oneSetWidth}px`);
+//   const oneSetWidth = track.scrollWidth / 2;
+//   console.log('1セットの幅:', oneSetWidth);
+//   track.style.setProperty('--scroll-end', `-${oneSetWidth}px`);
 
-});
+// });
