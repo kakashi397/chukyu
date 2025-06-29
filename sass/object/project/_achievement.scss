@@ -6,14 +6,32 @@
 /* アチーブメントセクション */
 .p-achievement {
   padding-top: clamp-rem(375, 40, 1536, 80);
+  &__title {
+    font-size: clamp-rem(320, 17, 375, 20);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    color: $black;
+    @include media(s) {
+      font-size: clamp-rem(375, 20, 1536, 32);
+    }
+  }
   &__metrics-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: rem(8);
+    @include media(m) {
+      flex-direction: row;
+      justify-content: center;
+      gap: rem(84);
+    }
   }
   &__img {
     max-width: rem(280);
+    @include media(l) {
+      max-width: clamp-rem(991, 280, 1536, 428);
+    }
   }
   &__logo-carousel {
     margin-top: clamp-rem(375, 39, 1536, 64);

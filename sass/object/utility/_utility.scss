@@ -25,3 +25,12 @@
     font-size: rem(24);
   }
 }
+.u-uppercase {
+  text-transform: uppercase;
+}
+.u-color-main {
+  color: $main;
+}
+.u-fz-24-32 {
+  font-size: clamp-rem(375, 24, 1536, 32);
+}
