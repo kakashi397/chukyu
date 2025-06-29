@@ -1,0 +1,32 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+
+/* アバウト */
+.p-about {
+  padding-top: clamp-rem(375, 64, 1536, 96);
+  color: $black;
+  &__text {
+    margin-top: clamp-rem(375, 64, 1536, 51);
+    text-align: center;
+    font-size: clamp-rem(375, 20, 1536, 24);
+    font-weight: 700;
+    line-height: 1.8;
+  }
+  &__underlay {
+    margin-top: rem(54);
+    padding: 0 rem(13);
+    background-color: $backbround-sub;
+    border-radius: rem(5);
+    // width: 100%;
+    max-width: rem(315);
+    height: rem(648);
+    margin-inline: auto;
+  }
+  &__img {
+    max-width: rem(315);
+    max-height: rem(648);
+    width: auto;
+    height: auto;
+  }
+}
