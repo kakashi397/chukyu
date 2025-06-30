@@ -4,7 +4,7 @@
 
 /* アバウト */
 .p-about {
-  padding-top: clamp-rem(375, 64, 1536, 96);
+  padding-top: clamp-rem(375, 64, 1536, 85);
   color: $black;
   &__text {
     margin-top: clamp-rem(375, 64, 1536, 51);
@@ -16,17 +16,34 @@
   &__underlay {
     margin-top: rem(54);
     padding: 0 rem(13);
-    background-color: $backbround-sub;
+    background-color: aquamarine;
+    // background-color: $backbround-sub;
     border-radius: rem(5);
-    // width: 100%;
-    max-width: rem(315);
-    height: rem(648);
-    margin-inline: auto;
+    max-width: rem(341);
+    margin-inline: auto ;
+    @include media(m) {
+      max-width: rem(834);
+      // max-height: rem(276);
+      position: relative;
+      z-index: 0;
+    }
   }
   &__img {
-    max-width: rem(315);
-    max-height: rem(648);
-    width: auto;
-    height: auto;
+    &--only-sp {
+      @include media(m) {
+        display: none;
+      }
+    }
+    &--only-pc {
+      display: none;
+      @include media(m) {
+        display: block;
+        width: rem(562);
+        margin-inline: auto;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+      }
+    }
   }
 }
