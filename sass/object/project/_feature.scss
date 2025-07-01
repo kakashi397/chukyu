@@ -1,0 +1,19 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+
+/* フィーチャー */
+.p-feature {
+  padding-top: clamp-rem(375, 72, 1536, 96);
+  &__cards {
+    display: grid;
+    gap: rem(24);
+    grid-template-columns: repeat(1, 1fr);
+  }
+  &__item {
+    border: 1px solid $main;
+    padding: rem(14) rem(30) 0;
+    display: grid;
+    gap: rem(19);
+  }
+}
