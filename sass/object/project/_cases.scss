@@ -6,6 +6,7 @@
 /* 導入事例 */
 .p-cases {
   padding-top: clamp-rem(375, 73, 1536, 96);
+  padding-bottom: clamp-rem(375, 45, 1536, 55);
   position: relative;
   @include media(m) {
     max-width: rem(1024);

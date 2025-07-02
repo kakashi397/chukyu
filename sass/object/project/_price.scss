@@ -1,0 +1,54 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+
+/* 料金 */
+.p-price {
+  padding-top: clamp-rem(375, 65, 1536, 88);
+
+  background-color: $backbround-sub;
+  &__cards {
+    display: flex;
+    justify-content: center;
+    gap: rem(12);
+    padding-top: clamp-rem(375, 26, 1536, 62);
+    margin-bottom: rem(48);
+  }
+  &__card {
+    width: clamp-rem(375, 96, 1536, 296);
+    height: clamp-rem(375, 91, 1536, 277);
+    border-radius: rem(5);
+    box-shadow: 0px 4px 4px 0px #33333340;
+    border-top: clamp-rem(375, 6, 1536, 12) solid $main;
+    text-align: center;
+    padding: clamp-rem(375, 8, 1536, 31) 0 clamp-rem(375, 8, 1536, 90);
+  }
+  &__head {
+    color: $black;
+    font-size: clamp-rem(375, 12, 1536, 24);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: rem(4);
+  }
+  &__body {
+    color: $black;
+    font-weight: 700;
+    font-size: clamp-rem(375, 12, 1536,32);
+    & .p-price__number {
+      font-weight: 700;
+      color: $main;
+      font-size: clamp-rem(375, 36, 1536, 96);
+    }
+  }
+  &__notes {
+    // max-width: rem(684);
+    @include media(s) {
+      width: clamp-rem(375, 311, 1536, 684);
+    }
+  }
+  &__note {
+    font-size: clamp-rem(375, 12, 1536, 14);
+    font-weight: 400;
+    line-height: 1.84;
+  }
+}
