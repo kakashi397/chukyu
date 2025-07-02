@@ -5,6 +5,7 @@
 /* フィーチャー */
 .p-feature {
   padding-top: clamp-rem(375, 71, 1536, 116);
+  padding-bottom: rem(31);
   &__cards {
     display: grid;
     gap: rem(24);

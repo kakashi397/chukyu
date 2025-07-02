@@ -16,4 +16,18 @@
       padding: rem(16) rem(40);
     }
   }
+  &--download-cta {
+    display: block;
+    background-color: $white;
+    color: $main;
+    font-size: rem(20);
+    line-height: 1;
+    width: max-content;
+    padding: rem(16) rem(30);
+    margin-inline: auto;
+    @include media(s) {
+      padding-right: rem(50);
+      padding-left: rem(50);
+    }
+  }
 }

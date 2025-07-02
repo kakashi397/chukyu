@@ -1,0 +1,30 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+
+/* ダウンロードCTA */
+.p-download-cta {
+  background-image: url(/img/70651bfde0f8205b73cf1887e2d52f90fb5512e9.jpg);
+  background-size: cover;
+  background-position: 45% center;
+  background-color: $main;//背景画像が読み込まれなかったときに保険
+  padding: rem(40) 0;
+  text-align: center;
+  @include media(m) {
+    padding: rem(59) 0 rem(61);
+  }
+  &__inner {
+    padding-right: rem(17);
+    padding-left: rem(17);
+  }
+  &__text {
+    font-size: rem(24);
+    font-weight: 700;
+    line-height: 1.8;
+    color: $white;
+    margin-bottom: rem(39);
+    @include media(m) {
+      margin-bottom: rem(23);
+    }
+  }
+}
