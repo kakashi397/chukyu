@@ -61,3 +61,12 @@
 .l-feature__cards-wrapper {
   padding-top: rem(52);
 }
+.l-cases__slider-wrapper {
+  margin-top: clamp-rem(375, 57, 1536, 73);
+  padding-right: rem(17);
+  padding-left:  rem(17);
+  @include media(s) {
+    padding-right: rem(32);
+    padding-left: rem(32);
+  }
+}

@@ -1,0 +1,96 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+@use '../../foundation/keyframes' as *;
+
+/* 導入事例 */
+.p-cases {
+  padding-top: clamp-rem(375, 73, 1536, 96);
+  position: relative;
+  @include media(m) {
+    max-width: rem(1024);
+    margin-inline: auto;
+  }
+  &__slider {
+    display: flex;
+    justify-content: center;
+    @include media(m) {
+      gap: rem(70);
+    }
+  }
+  &__item {
+    box-shadow: 0px 5px 8px 3px #33333340;
+    padding: rem(32) rem(10) 0;
+    border-top-left-radius: rem(30);
+    border-bottom-right-radius: rem(30);
+    max-width: rem(311);
+    height: rem(520);
+    position: relative;
+    @include media(s) {
+      height: rem(471);
+    }
+    @include media(m) {
+      padding: rem(32) rem(20) 0;
+      max-width: rem(405);
+      height: rem(488);
+    }
+  }
+  &__heading {
+    color: $black;
+    font-size: rem(18);
+    font-weight: 700;
+    line-height: 1.8;
+    margin-bottom: rem(24);
+    @include media(m) {
+      font-size: rem(24);
+    }
+  }
+  &__description {
+    color: $black;
+    font-size: rem(12);
+    font-weight: 400;
+    line-height: 1.8;
+    @include media(m) {
+      font-size: rem(14);
+    }
+  }
+  &__img {
+    width: rem(164);
+    position: absolute;
+    bottom: rem(20);
+    &--2 {
+      width: rem(64);
+    }
+    &--3 {
+      width: rem(81);
+    }
+    &--4 {
+      width: rem(164);
+    }
+  }
+  &__btn {
+    width: rem(20);
+    height: rem(20);
+    border-radius: 50%;
+    background-color: $white;
+    position: absolute;
+    top: rem(391);
+    &--prev {
+      left: rem(6);
+      @include media(m) {
+        left: rem(18);
+      }
+    }
+    &--next {
+      right: rem(6);
+      @include media(m) {
+        right: rem(18);
+      }
+    }
+    @include media(m) {
+      width: rem(34);
+      height: rem(34);
+      top: rem(445);
+    }
+  }
+}
