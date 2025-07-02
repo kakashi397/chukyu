@@ -4,17 +4,37 @@
 
 /* フィーチャー */
 .p-feature {
-  padding-top: clamp-rem(375, 71, 1536, 96);
+  padding-top: clamp-rem(375, 71, 1536, 116);
   &__cards {
     display: grid;
     gap: rem(24);
     grid-template-columns: repeat(1, 1fr);
+    @include media(m) {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      justify-content: center;
+    }
   }
   &__item {
     border: 1px solid $main;
-    padding: rem(14) rem(30) rem(22);
-    display: grid;
+    padding: rem(14) rem(29) rem(22);
+    display: flex;
+    flex-direction: column;
     gap: rem(18.6);// DevToolで細かく調整して出した数字 
+    max-width: rem(341);
+    margin-inline: auto;
+    @include media(m) {
+      padding-right: rem(30);
+      padding-left: rem(31);
+      gap: rem(17);
+      max-width: rem(480);
+      min-height: rem(325);
+      display: grid;
+      grid-template-rows: auto rem(48) 1fr;
+    }
+    @include media(l) {
+      grid-template-rows: auto auto 1fr;
+    }
   }
   &__img {
     max-width: rem(116);
