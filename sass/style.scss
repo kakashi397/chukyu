@@ -9,6 +9,7 @@
 @use './object/component/stat-circle';
 @use './object/component/btn';
 @use './object/component/section-title';
+@use './object/component/accordion';
 @use './object/project/hero';
 @use './object/project/request-form';
 @use './object/project/achievement';
@@ -17,4 +18,5 @@
 @use './object/project/download-cta';
 @use './object/project/cases';
 @use './object/project/price';
+@use './object/project/faq';
 @use './object/utility/utility';

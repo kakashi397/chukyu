@@ -1,0 +1,10 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+@use '../../foundation/keyframes' as *;
+
+/* FAQ */
+.p-faq {
+  padding-top: clamp-rem(375, 89, 1536, 153);
+  background-color: $backbround-sub;
+}
