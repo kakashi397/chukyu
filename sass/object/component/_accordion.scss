@@ -6,10 +6,21 @@
 /* アコーディオン */
 .c-accordion {
   &__trigger {
-    // background-color: $white;
-    background-color: lightgreen;//制作中の身の色　見やすくするため
+    background-color: $white;
     border-radius: rem(10);
-    padding: rem(16) rem(10);
+    width: 100%;
+    padding: 
+      clamp-rem(375, 16, 1536, 18)
+      clamp-rem(375, 10, 1536, 24)
+      clamp-rem(375, 16, 1536, 18)
+      clamp-rem(375, 10, 1536, 36);
+    font-size: clamp-rem(375, 14, 1536, 16);
+    font-weight: 700;
+    line-height: 1;
+    color: $black;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
   }
 }

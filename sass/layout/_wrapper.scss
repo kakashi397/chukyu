@@ -79,12 +79,8 @@
   max-width: 100%;
   margin-inline: auto;
 }
-// .l-faq-wrapper {
-//   padding-right: rem(16);
-//   padding-left: rem(16);
-// }
 .l-accordion-wrapper {
-  margin-top: clamp-rem(375, 48, 1536, 70);
+  margin-top: clamp-rem(375, 42.5, 1536, 70);
   width: clamp-rem(320, scale(375, 343, 320), 375, 343);
   margin-inline: auto;
   @include media(s) {

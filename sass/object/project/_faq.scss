@@ -5,6 +5,47 @@
 
 /* FAQ */
 .p-faq {
-  padding-top: clamp-rem(375, 89, 1536, 153);
+  padding-top: clamp-rem(375, 82, 1536, 153);
   background-color: $backbround-sub;
+  &__icon {
+    width: clamp-rem(375, 32, 1536, 44);
+    height: clamp-rem(375, 32, 1536, 44);
+    background-color: $main;
+    border-radius: 50%;
+    font-family: 'Goldman', serif;
+    font-size: clamp-rem(375, 16, 1536, 32);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $white;
+    padding: 8px 10px 8px 9px;
+  }
+  &__btn {
+    display: inline-block;
+    width: clamp-rem(375, 16, 1536, 32);
+    height: clamp-rem(375, 16, 1536, 32);
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $black;
+    }
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      height: rem(2);
+    }
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      width: rem(2);
+      height: 100%;
+    }
+  }
+  &__text {
+    width: rem(252);
+  }
 }
