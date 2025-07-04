@@ -6,21 +6,38 @@
 /* アコーディオン */
 .c-accordion {
   &__trigger {
+    margin-top: rem(16);
     background-color: $white;
     border-radius: rem(10);
     width: 100%;
+    height: 64px;
     padding: 
-      clamp-rem(375, 16, 1536, 18)
+      clamp-rem(375, 11, 1536, 18)
       clamp-rem(375, 10, 1536, 24)
-      clamp-rem(375, 16, 1536, 18)
+      clamp-rem(375, 11, 1536, 18)
       clamp-rem(375, 10, 1536, 36);
     font-size: clamp-rem(375, 14, 1536, 16);
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.5;
     color: $black;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: left;
+  }
+  &__answer {
+    padding: clamp-rem(375, 10, 1536, 24) clamp-rem(375, 10, 1536, 36);
+    font-size: clamp-rem(375, 14, 1536, 16);
+    font-weight: 400;
+    line-height: 1.8;
+    background-color: $white;
+    border-bottom-right-radius: rem(10);
+    border-bottom-left-radius: rem(10);
+  }
+  &__question[open] > &__trigger {
+    background-color: $main;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: $white;
   }
 }
