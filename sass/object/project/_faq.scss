@@ -4,49 +4,59 @@
 @use '../../foundation/keyframes' as *;
 
 /* FAQ */
-.p-faq {
-  padding-top: clamp-rem(375, 82, 1536, 153);
-  background-color: $backbround-sub;
-  &__icon {
-    width: clamp-rem(375, 32, 1536, 44);
-    height: clamp-rem(375, 32, 1536, 44);
-    background-color: $main;
-    border-radius: 50%;
-    font-family: 'Goldman';
-    font-size: clamp-rem(375, 16, 1536, 32);
-    font-weight: 400;
-    line-height: 1;
-    text-transform: uppercase;
-    color: $white;
-    padding: 8px 10px 8px 9px;
+  .p-faq {
+    padding-top: clamp-rem(375, 82, 1536, 142);
+    background-color: $background-sub;
+    &__icon {
+      width: clamp-rem(375, 32, 1536, 44);
+      height: clamp-rem(375, 32, 1536, 44);
+      background-color: $main;
+      border-radius: 50%;
+      font-family: 'Goldman';
+      font-size: clamp-rem(375, 16, 1536, 32);
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+      color: $white;
+      padding: 8px 10px 8px 9px;
+      margin-right: rem(14);
+    }
+    .c-accordion__question:nth-of-type(1) .p-faq__icon {
+    margin-right: rem(10);
+    }
+    &__text {
+      flex: 1;
+    }
+    &__btn {
+      display: inline-block;
+      margin-left: auto;
+      width: clamp-rem(375, 16, 1536, 32);
+      height: clamp-rem(375, 16, 1536, 32);
+      position: relative;
+      flex-shrink: 0;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $black;
+      }
+      &::before {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        height: rem(2);
+      }
+      &::after {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: rem(2);
+        height: 100%;
+      }
+    }
   }
-  // &__text {
-  //   width: rem(252);
-  // }
-  &__btn {
-    display: inline-block;
-    width: clamp-rem(375, 16, 1536, 32);
-    height: clamp-rem(375, 16, 1536, 32);
-    position: relative;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: $black;
-    }
-    &::before {
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      width: 100%;
-      height: rem(2);
-    }
-    &::after {
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0;
-      width: rem(2);
-      height: 100%;
-    }
+  .c-accordion__question[open]  .p-faq__icon {
+    background-color: $white;
+    color: $main;
   }
-}

@@ -5,8 +5,10 @@
 
 /* アコーディオン */
 .c-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: clamp-rem(375, 16, 1536, 24);
   &__trigger {
-    margin-top: rem(16);
     background-color: $white;
     border-radius: rem(10);
     width: 100%;
@@ -22,8 +24,12 @@
     color: $black;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    text-align: left;
+  //   gap: rem(14);
+  // }
+  // &__question:nth-of-type(1) {
+  //   .c-accordion__trigger {
+  //     gap: rem(10);
+  //   }
   }
   &__answer {
     padding: clamp-rem(375, 10, 1536, 24) clamp-rem(375, 10, 1536, 36);
