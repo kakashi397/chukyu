@@ -80,7 +80,7 @@
   margin-inline: auto;
 }
 .l-accordion-wrapper {
-  margin-top: clamp-rem(375, 42.5, 1536, 70);
+  margin-top: clamp-rem(375, 42.5, 1536, 63);
   width: clamp-rem(320, scale(375, 343, 320), 375, 343);
   margin-inline: auto;
   @include media(s) {
