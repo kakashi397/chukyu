@@ -2,5 +2,11 @@
 
 /* ロゴ */
 .c-logo {
-  width: clamp-rem(375, 139, 1536, 227);
+  &--header {
+    width: clamp-rem(375, 139, 1536, 227);
+  }
+  &--footer {
+    width: rem(227);
+    margin-inline: auto;
+  }
 }

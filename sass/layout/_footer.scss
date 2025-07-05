@@ -1,0 +1,22 @@
+@use '../foundation/functions' as *;
+@use '../foundation/variables' as *;
+@use '../foundation/mixin' as *;
+
+/* フッター */
+.l-footer {
+  padding-top: clamp-rem(375, 24, 1536, 26);
+  padding-bottom: rem(24);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  @include media(m) {
+    margin-bottom: rem(18);
+  }
+  &__copy {
+    margin-top: rem(37);
+    font-size: rem(12);
+    font-weight: 400;
+    font-family: 'Goldman';
+    color: $black;
+  }
+}
