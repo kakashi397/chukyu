@@ -19,6 +19,11 @@
     display: block;
   }
 }
+.u-hidden-pc {
+  @include media(l) {
+    display: none;
+  }
+}
 .u-pc-fz24 {
   display: inline;
   @include media(m) {
