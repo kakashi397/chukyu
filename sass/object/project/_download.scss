@@ -1,0 +1,73 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+
+/* ダウンロード */
+.p-download {
+  background: linear-gradient(to right, $main, $sub);
+  &__head {
+    font-size: clamp-rem(375, 24, 1536, 32);
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+    line-height: 1.5;
+    @include media(m) {
+      line-height: 1;
+    }
+  }
+  &__body {
+    margin-top: clamp-rem(375, 26, 1536, 79);
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+    @include media(l) {
+      flex-direction: row;
+      gap: rem(35);
+      justify-content: center;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp-rem(375, 16, 1536, 48);
+    @include media(l) {
+      max-width: rem(413);
+    }
+  }
+  &__text {
+    font-size: clamp-rem(375, 12, 1536, 16);
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+    line-height: 1.8;
+    @include media(l) {
+      margin-top: rem(32);
+      text-align: left;
+    }
+  }
+  &__imgs {
+    position: relative;
+    width: clamp-rem(375, 240, 1536, 419);
+    height: clamp-rem(375, 149, 1536, 266);
+    margin-inline: auto;
+    @include media(l) {
+      margin-left: rem(-6);
+    }
+  }
+  &__img {
+    &--front {
+      width: to-percent(319, 413);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 20;
+    }
+    &--back {
+      width: to-percent(290, 413);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+    }
+  }
+}

@@ -40,6 +40,12 @@
   display: flex;
   flex-direction: column;
 }
+.l-form-wrapper {
+  margin-inline: auto;
+  @include media(l) {
+    margin-inline: 0;
+  }
+}
 .l-btn-wrapper {
   text-align: center;
 }
@@ -86,4 +92,10 @@
   @include media(s) {
     width: clamp-rem(375, 343, 1536, 1024);
   }
+}
+.l-download-wrapper {
+  padding-top: clamp-rem(375, 72, 1536, 96);
+  padding-right: rem(16);
+  padding-bottom: clamp-rem(375, 46, 1536, 57);
+  padding-left: rem(16);
 }

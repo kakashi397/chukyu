@@ -8,9 +8,8 @@
   padding: rem(8) rem(8) rem(19);
   border-radius: rem(5);
   max-width: rem(343);
-  margin-inline: auto;
+  max-height: rem(586);
   @include media(l) {
-    margin-inline: 0;
     max-width: rem(400);
     padding: rem(8) rem(16) rem(28);
   }
