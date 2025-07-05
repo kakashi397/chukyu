@@ -16,3 +16,19 @@
 
   @return clamp(#{$min-rem}, #{$intercept-rem} + #{$slope}vw, #{$max-rem});
 }
+
+// %変換ジェネレータ
+@function to-percent($value, $base) {
+  @if unitless($value) {
+    $value: $value * 1px;
+  }
+  @if unitless($base) {
+    $base: $base * 1px;
+  }
+  @return math.div($value, $base) * 100%;
+}
+
+// スケール関数
+@function scale($base, $value, $target) {
+  @return ($value / $base) * $target;
+}

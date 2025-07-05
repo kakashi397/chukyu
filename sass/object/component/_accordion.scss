@@ -1,0 +1,43 @@
+@use '../../foundation/functions' as *;
+@use '../../foundation/mixin' as *;
+@use '../../foundation/variables' as *;
+@use '../../foundation/keyframes' as *;
+
+/* アコーディオン */
+.c-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: clamp-rem(375, 16, 1536, 24);
+  &__trigger {
+    background-color: $white;
+    border-radius: rem(10);
+    width: 100%;
+    height: clamp-rem(375, 64, 1536, 80);
+    padding: 
+      clamp-rem(375, 11, 1536, 18)
+      clamp-rem(375, 10, 1536, 24)
+      clamp-rem(375, 11, 1536, 18)
+      clamp-rem(375, 10, 1536, 36);
+    font-size: clamp-rem(375, 14, 1536, 16);
+    font-weight: 700;
+    line-height: 1.5;
+    color: $black;
+    display: flex;
+    align-items: center;
+  }
+  &__answer {
+    padding: clamp-rem(375, 10, 1536, 24) clamp-rem(375, 10, 1536, 36);
+    font-size: clamp-rem(375, 14, 1536, 16);
+    font-weight: 400;
+    line-height: 1.8;
+    background-color: $white;
+    border-bottom-right-radius: rem(10);
+    border-bottom-left-radius: rem(10);
+  }
+  &__question[open] > &__trigger {
+    background-color: $main;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: $white;
+  }
+}
