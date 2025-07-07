@@ -38,19 +38,26 @@ for (const link of smoothScrollLinks) { // 取得したa要素を個々に定数
 /* 
 フォームのサブミット制御
 */
-const form = document.querySelector('.js-request-form');
-const submitBtn = form.querySelector('.js-submit');
-const inputs = form.querySelectorAll('.js-input');
+const form = document.querySelector('.js-request-form'); // フォームの要素を取得
+const inputs = form.querySelectorAll('.js-input'); // フォーム内のinput要素を取得
+const submitBtn = form.querySelector('.js-submit');  // submitタイプのinput要素を取得
 
 function checkInputStatus() {
-  let isAllFilled = true;
+  let isAllFilled = true; // 変数isAllFilledの初期値はtrue
 
-  for(const input of inputs) {
-    if(input.value.trim() === '') {
-      isAllFilled = false;
+  for(const input of inputs) {  // inputsのなかの各ノードをinputに代入
+    if(input.value.trim() === '') { // ユーザーに入力された値の前後の空白をトリミングで除去して、完全な空白になるのなら
+      isAllFilled = false; 
       break;
     }
   }
-
-  submitBtn.disabled = !isAllFilled;
+  // submitBtn.disabled = !isAllFilled;　論理のねじれに慣れたらこっちの方がスリム
+  if (isAllFilled) { // isAllFilledがtrueなら
+    submitBtn.disabled = false; // disabledをfalseにする＝ボタンが使える
+  } else { // isAllFilledがfalseなら
+    submitBtn.disabled = true; // disabledがtrueになる＝ボタンが使えなくなる
+  }
 }
+
+form.addEventListener('input', checkInputStatus); // ユーザーが入力する度に発火
+document.addEventListener('DOMContentLoaded', checkInputStatus); // ページ読み込み直後に発火
