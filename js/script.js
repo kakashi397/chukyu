@@ -33,3 +33,24 @@ for (const link of smoothScrollLinks) { // 取得したa要素を個々に定数
     }
   });
 }
+
+
+/* 
+フォームのサブミット制御
+*/
+const form = document.querySelector('.js-request-form');
+const submitBtn = form.querySelector('.js-submit');
+const inputs = form.querySelectorAll('.js-input');
+
+function checkInputStatus() {
+  let isAllFilled = true;
+
+  for(const input of inputs) {
+    if(input.value.trim() === '') {
+      isAllFilled = false;
+      break;
+    }
+  }
+
+  submitBtn.disabled = !isAllFilled;
+}
