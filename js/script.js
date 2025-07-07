@@ -38,6 +38,7 @@ for (const link of smoothScrollLinks) { // 取得したa要素を個々に定数
 /* 
 フォームのサブミット制御
 */
+// input要素にrequired属性を付けているのでHTMLでも未入力制御をしているがJSでも二重のチェックをする
 const form = document.querySelector('.js-request-form'); // フォームの要素を取得
 const inputs = form.querySelectorAll('.js-input'); // フォーム内のinput要素を取得
 const submitBtn = form.querySelector('.js-submit');  // submitタイプのinput要素を取得
@@ -61,3 +62,32 @@ function checkInputStatus() {
 
 form.addEventListener('input', checkInputStatus); // ユーザーが入力する度に発火
 document.addEventListener('DOMContentLoaded', checkInputStatus); // ページ読み込み直後に発火
+
+
+/*
+自作フォームとグーグルフォームを連携させる
+*/
+const formSubmitTatget = document.querySelector('.js-request-form'); // formを取得
+const thankYouMessage = document.querySelector('.js-thanks'); // thanksのp要素を取得
+
+formSubmitTatget.addEventListener('submit', function (e) {  //formのsubmitが発動したら発火
+  e.preventDefault(); // デフォルトの動作、ページ遷移を防ぐ！
+
+  const formData = new FormData(formSubmitTatget);
+
+  fetch(formSubmitTatget.action, {
+    method: 'POST',
+    mode: 'no-cors', // ←これが重要（GoogleフォームはCORS許可してない）
+    body: formData
+  }).then(() => {
+    alert('送信しました！');
+
+    submitBtn.style.display = 'none'; // 送信したらボタンを非表示
+    if (thankYouMessage) {
+      thankYouMessage.style.display = 'block'; // 送信したらthankYouMessageを表示
+    }
+    formSubmitTatget.reset(); // フォームのリセット（任意）
+  }).catch(() => {
+    alert('送信に失敗しました。');
+  });
+});
