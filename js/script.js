@@ -71,7 +71,7 @@ const formSubmitTatget = document.querySelector('.js-request-form'); // formを�
 const thankYouMessage = document.querySelector('.js-thanks'); // thanksのp要素を取得
 
 formSubmitTatget.addEventListener('submit', function (e) {  //formのsubmitが発動したら発火
-  e.preventDefault(); // デフォルトの動作、ページ遷移を防ぐ！
+  e.preventDefault(); // デフォルトの動作ページ遷移を防ぐ！
 
   const formData = new FormData(formSubmitTatget);
 
