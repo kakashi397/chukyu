@@ -19,7 +19,7 @@
     <div class="l-header-wrapper">
       <div class="l-header__inner">
         <h1 class="c-logo c-logo--header">
-          <a href="index.html" class="c-logo__link">
+          <a href="#" class="c-logo__link">
             <img class="c-logo__img" src="img/logo.svg" alt="CareSend | 有資格介護人材が集まる介護派遣サービス">
           </a>
         </h1>
@@ -447,27 +447,5 @@
     <img src="img/logo.svg" alt="CareSend | 有資格介護人材が集まる介護派遣サービス" class="c-logo c-logo--footer">
     <small class="l-footer__copy">© CareSend, Inc.</small>
   </footer>
-
-  <script>// このスクリプトは仮なので後で消す
-  const form = document.getElementById('request-form');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // ページ遷移を防ぐ！
-
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: 'POST',
-      mode: 'no-cors', // ←これが重要（GoogleフォームはCORS許可してない）
-      body: formData
-    }).then(() => {
-      alert('送信しました！');
-      form.reset(); // フォームのリセット（任意）
-    }).catch(() => {
-      alert('送信に失敗しました。');
-    });
-  });
-</script>
-
 </body>
 </html>
