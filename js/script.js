@@ -35,59 +35,52 @@ for (const link of smoothScrollLinks) { // 取得したa要素を個々に定数
 }
 
 
-/* 
-フォームのサブミット制御
-*/
-// input要素にrequired属性を付けているのでHTMLでも未入力制御をしているがJSでも二重のチェックをする
-const form = document.querySelector('.js-request-form'); // フォームの要素を取得
-const inputs = form.querySelectorAll('.js-input'); // フォーム内のinput要素を取得
-const submitBtn = form.querySelector('.js-submit');  // submitタイプのinput要素を取得
-
-function checkInputStatus() {
-  let isAllFilled = true; // 変数isAllFilledの初期値はtrue
-
-  for(const input of inputs) {  // inputsのなかの各ノードをinputに代入
-    if(input.value.trim() === '') { // ユーザーに入力された値の前後の空白をトリミングで除去して、完全な空白になるのなら
-      isAllFilled = false; 
-      break;
-    }
-  }
-  // submitBtn.disabled = !isAllFilled;　論理のねじれに慣れたらこっちの方がスリム
-  if (isAllFilled) { // isAllFilledがtrueなら
-    submitBtn.disabled = false; // disabledをfalseにする＝ボタンが使える
-  } else { // isAllFilledがfalseなら
-    submitBtn.disabled = true; // disabledがtrueになる＝ボタンが使えなくなる
-  }
-}
-
-form.addEventListener('input', checkInputStatus); // ユーザーが入力する度に発火
-document.addEventListener('DOMContentLoaded', checkInputStatus); // ページ読み込み直後に発火
-
-
 /*
-自作フォームとグーグルフォームを連携させる
+フォーム関連
 */
-const formSubmitTatget = document.querySelector('.js-request-form'); // formを取得
-const thankYouMessage = document.querySelector('.js-thanks'); // thanksのp要素を取得
+const forms = document.querySelectorAll('.js-request-form'); // 同一フォームが２か所に設置してあるのでセレクタオールで全部取得
 
-formSubmitTatget.addEventListener('submit', function (e) {  //formのsubmitが発動したら発火
-  e.preventDefault(); // デフォルトの動作ページ遷移を防ぐ！
+forms.forEach((form) => { // フォームひとつずつに処理をする
+  const inputs = form.querySelectorAll('.js-input'); // フォーム内のインプット要素をすべて取得
+  const submitBtn = form.querySelector('.js-submit'); // フォーム内のサブミットボタンを取得
+  const thankYouMessage = form.querySelector('.js-thanks'); // フォーム内のサンクスメッセージを取得
 
-  const formData = new FormData(formSubmitTatget);
+  function checkInputStatus() { // 関数を作成
+    let isAllFilled = true; // 変数isAllFilledの初期値はtrue
 
-  fetch(formSubmitTatget.action, {
-    method: 'POST',
-    mode: 'no-cors', // ←これが重要（GoogleフォームはCORS許可してない）
-    body: formData
-  }).then(() => {
-    alert('送信しました！');
-
-    submitBtn.style.display = 'none'; // 送信したらボタンを非表示
-    if (thankYouMessage) {
-      thankYouMessage.style.display = 'block'; // 送信したらthankYouMessageを表示
+    for(const input of inputs) { // 各インプット要素それぞれに処理
+      if(input.value.trim() === '') { // インプット内に入力された値が空白なら
+        isAllFilled = false; // 変数isAllFilledをfalseに
+        break; // 処理を終了する
+      }
     }
-    formSubmitTatget.reset(); // フォームのリセット（任意）
-  }).catch(() => {
-    alert('送信に失敗しました。');
+    if (isAllFilled) { // isAllFilledがtrueなら
+      submitBtn.disabled = false; // disabledをfalseにする＝ボタンが使える
+    } else { // isAllFilledがfalseなら
+      submitBtn.disabled = true; // disabledがtrueになる＝ボタンが使えなくなる
+    }
+  }
+
+  form.addEventListener('input', checkInputStatus); // フォームひとつずつにイベントリスナー(インプット)を設定 インプットがある度に関数が発火
+  checkInputStatus(); // イベント関係なしに、初期状態のときに一度関数を発火している
+
+  form.addEventListener('submit', function(e) { // イベントリスナー（サブミット）を設定 サブミットがあれば下の関数を発火
+    e.preventDefault(); // デフォルトの動作を打ち消す
+
+    const formData = new FormData(form); // 定数formDateに定数formに入っているデータを渡してる
+
+    fetch(form.action, { // フォームの内容をグーグルフォームに送る
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    }).then(() => {
+      alert('送信しました！');
+      document.querySelectorAll('.js-submit').forEach(btn => btn.style.display = 'none');
+      document.querySelectorAll('.js-thanks').forEach(thanks => thanks.style.display = 'block');
+      form.reset();
+      checkInputStatus();
+    }).catch(() => { // thenに行かなかったときのルート
+      alert('送信に失敗しました。');
+    });
   });
 });
