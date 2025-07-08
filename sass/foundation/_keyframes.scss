@@ -1,8 +1,8 @@
-// @keyframes scroll-left {
-//   0% {
-//     transform: translateX(0);
-//   }
-//   100% {
-//     transform: translateX(var(--scroll-end));
-//   }
-// }
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

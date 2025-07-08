@@ -84,3 +84,18 @@ forms.forEach((form) => { // フォームひとつずつに処理をする
     });
   });
 });
+
+/* 
+カルーセル
+*/
+const track = document.querySelector('.js-logo-track');
+if (!track) {
+  console.warn('要素が見つからなかったので処理をスキップします');
+} else {
+const items = Array.from(track.children);
+const oneSetWidth = track.scrollWidth / 2;
+
+track.style.setProperty('--scroll-end', `-${oneSetWidth}px`);
+
+console.log(oneSetWidth);
+}
