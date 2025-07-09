@@ -14,9 +14,11 @@
   }
   &__slider {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    width: max-content;
     @include media(m) {
       gap: rem(70);
+      padding: 0 rem(40);
     }
   }
   &__item {

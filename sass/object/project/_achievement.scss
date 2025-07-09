@@ -41,19 +41,15 @@
   }
   &__logo-track {
     display: flex;
-    // gap: clamp-rem(375, 63, 1536, 80);
+    gap: clamp-rem(375, 63, 1536, 80);
     flex-wrap: nowrap; // 保険のひとこと
     width: max-content;
-    animation: scroll-left 5s linear infinite; // scroll-leftの定義はfoundation/_keyframes.scssで行っている
+    // animation: scroll-left 5s linear infinite; // scroll-leftの定義はfoundation/_keyframes.scssで行っている
     transform: translateX(0);
     --scroll-end: -50%; // これは仮の数字で、実際にはJSから値が代入される
   }
   &__logo-item {
     width: clamp-rem(375, 160, 1536, 248);
     flex-shrink: 0; // clampの指定幅よりも短くなることを明示的に禁止
-    margin-right: clamp-rem(375, 63, 1536, 80);
   }
-  &__logo-item:last-child {
-  margin-right: 0; // 最後だけ余白なしに！
-}
 }

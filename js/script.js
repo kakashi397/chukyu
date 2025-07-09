@@ -88,14 +88,19 @@ forms.forEach((form) => { // フォームひとつずつに処理をする
 /* 
 カルーセル
 */
-const track = document.querySelector('.js-logo-track');
-if (!track) {
-  console.warn('要素が見つからなかったので処理をスキップします');
-} else {
-const items = Array.from(track.children);
-const oneSetWidth = track.scrollWidth / 2;
+// const track = document.querySelector('.js-logo-track');
+// if (track) {
+//   // 複製（←これで2セット分に）
+//   track.innerHTML += track.innerHTML;
 
-track.style.setProperty('--scroll-end', `-${oneSetWidth}px`);
+//   // 描画が終わってから幅を正確に測る
+//   requestAnimationFrame(() => {
+//     const oneSetWidth = track.scrollWidth / 2;
+//     track.style.setProperty('--scroll-end', `-${oneSetWidth}px`);
+//     console.log('1セット分の幅:', oneSetWidth);
+//   });
+// }
 
-console.log(oneSetWidth);
-}
+/*
+スライダー
+*/
