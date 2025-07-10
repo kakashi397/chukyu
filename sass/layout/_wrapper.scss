@@ -11,8 +11,7 @@
   margin-left: auto;
   }
 .l-hero-wrapper {
-  padding-right: rem(16);
-  padding-left: rem(16);
+  padding-inline: rem(16);
 }
 .l-hero__img-wrapper {
   margin-right: rem(-9);
@@ -50,35 +49,29 @@
   text-align: center;
 }
 .l-achievement-wrapper {
-  padding-right: rem(16);
-  padding-left: rem(16);
+  padding-inline: rem(16);
 }
 .l-achievement__metrics-wrapper {
   margin-top: clamp-rem(375, 30, 1536, 40);
 }
 .l-about-wrapper {
-  padding-right: rem(17);
-  padding-left: rem(17);
+  padding-inline: rem(17);
 }
 .l-feature-wrapper {
-  padding-right: rem(17);
-  padding-left: rem(17);
+  padding-inline: rem(17);
 }
 .l-feature__cards-wrapper {
   padding-top: rem(52);
 }
 .l-cases__slider-wrapper {
   margin-top: clamp-rem(375, 57, 1536, 73);
-  padding-right: rem(17);
-  padding-left:  rem(17);
+  padding-inline: rem(17);
   @include media(s) {
-    padding-right: rem(32);
-    padding-left: rem(32);
+    padding-inline: rem(32);
   }
 }
 .l-price-wrapper {
-  padding-right: rem(17);
-  padding-left: rem(17);
+  padding-inline: rem(17);
 }
 .l-price-content-wrapper {
   width: max-content;
@@ -94,8 +87,5 @@
   }
 }
 .l-download-wrapper {
-  padding-top: clamp-rem(375, 72, 1536, 96);
-  padding-right: rem(16);
-  padding-bottom: clamp-rem(375, 46, 1536, 57);
-  padding-left: rem(16);
+  padding: clamp-rem(375, 72, 1536, 96) rem(16) clamp-rem(375, 46, 1536, 57);
 }

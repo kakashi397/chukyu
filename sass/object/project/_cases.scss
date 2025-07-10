@@ -8,15 +8,19 @@
   padding-top: clamp-rem(375, 73, 1536, 96);
   padding-bottom: clamp-rem(375, 45, 1536, 55);
   position: relative;
+  overflow-x: hidden;
   @include media(m) {
-    max-width: rem(1024);
+    // max-width: rem(1024);
+    max-width: rem(1000);
     margin-inline: auto;
   }
   &__slider {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    width: max-content;
+    gap: rem(70);
     @include media(m) {
-      gap: rem(70);
+      padding-inline: rem(28);
     }
   }
   &__item {
@@ -79,13 +83,13 @@
     &--prev {
       left: rem(6);
       @include media(m) {
-        left: rem(18);
+        left: rem(6);
       }
     }
     &--next {
       right: rem(6);
       @include media(m) {
-        right: rem(18);
+        right: rem(6);
       }
     }
     @include media(m) {
@@ -95,3 +99,17 @@
     }
   }
 }
+
+
+/*
+今の問題点
+無限スクロールアニメーションの繋目がスムーズじゃない
+ロゴ一枚目の高さがズレている
+
+スライダー
+320px環境でカードの右辺が画面内に収まらない
+画面が広がると親要素の左辺にくっついてカードのdisplay flecが広がるのでだんだんと左にズレていく
+本当はカード一枚を画面中央に残したい
+
+アニメーションが難しすぎる
+*/

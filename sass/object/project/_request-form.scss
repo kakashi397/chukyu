@@ -91,9 +91,12 @@
     background-color: $form-background;
     border: 1px solid $form-border;
     border-radius: rem(5);
-    color: $form-placeholder;
+    color: $black;
     line-height: 1;
     padding: rem(12) rem(8);
+    &::placeholder {
+      color: $form-placeholder;
+    }
     &--name {
       width: 100%;
     }
@@ -124,6 +127,15 @@
       margin-right: 0;
       margin-bottom: rem(31);
       margin-left: 0;
+    }
+  }
+  &__thanks {
+    display: none;
+    font-weight: 700;
+    color: $black;
+    font-size: rem(14);
+    @include media(m) {
+      font-size: rem(16);
     }
   }
 }

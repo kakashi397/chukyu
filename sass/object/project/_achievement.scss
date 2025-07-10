@@ -3,7 +3,7 @@
 @use '../../foundation/variables' as *;
 @use '../../foundation/keyframes' as *;
 
-/* アチーブメントセクション */
+/* 実績 */
 .p-achievement {
   padding-top: clamp-rem(375, 40, 1536, 80);
   &__title {
@@ -36,7 +36,7 @@
   &__logo-carousel {
     margin-top: clamp-rem(375, 39, 1536, 64);
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
   }
   &__logo-track {
@@ -44,9 +44,9 @@
     gap: clamp-rem(375, 63, 1536, 80);
     flex-wrap: nowrap; // 保険のひとこと
     width: max-content;
-    // animation: scroll-left 30s linear infinite; // scroll-leftの定義はfoundation/_keyframes.scssで行っている
-    // transform: translateX(0);
-    // --scroll-end: -50%; // これは仮の数字で、実際にはJSから値が代入される
+    // animation: scroll-left 5s linear infinite; // scroll-leftの定義はfoundation/_keyframes.scssで行っている
+    transform: translateX(0);
+    --scroll-end: -50%; // これは仮の数字で、実際にはJSから値が代入される
   }
   &__logo-item {
     width: clamp-rem(375, 160, 1536, 248);
