@@ -36,7 +36,7 @@
   &__logo-carousel {
     margin-top: clamp-rem(375, 39, 1536, 64);
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
   }
   &__logo-track {

@@ -9,8 +9,10 @@
   padding-bottom: clamp-rem(375, 45, 1536, 55);
   position: relative;
   @include media(m) {
-    max-width: rem(1024);
+    // max-width: rem(1024);
+    max-width: rem(1000);
     margin-inline: auto;
+    overflow-x: hidden;
   }
   &__slider {
     display: flex;
@@ -18,7 +20,7 @@
     width: max-content;
     @include media(m) {
       gap: rem(70);
-      padding: 0 rem(40);
+      padding-inline: rem(28);
     }
   }
   &__item {
@@ -81,13 +83,13 @@
     &--prev {
       left: rem(6);
       @include media(m) {
-        left: rem(18);
+        left: rem(6);
       }
     }
     &--next {
       right: rem(6);
       @include media(m) {
-        right: rem(18);
+        right: rem(6);
       }
     }
     @include media(m) {
