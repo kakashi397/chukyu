@@ -65,8 +65,14 @@
 }
 .l-cases__slider-wrapper {
   margin-top: clamp-rem(375, 57, 1536, 73);
-  padding-inline: rem(17);
+  padding-left: calc(50% - (rem(286)/  2));
   @include media(s) {
+    padding-left: calc(50% - (rem(311)/  2));
+  }
+  @include media(m) {
+    padding-left: calc(50% - (rem(405)/  2));
+  }
+  @include media(l) {
     padding-inline: rem(32);
   }
 }
