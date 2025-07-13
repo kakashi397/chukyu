@@ -111,6 +111,13 @@ const swiper = new Swiper('.swiper', {
   spaceBetween: 70,
   centeredSlides: true,
   slidesPerView: 'auto',
+  breakpoints: {
+    991: {
+      centeredSlides: false,
+      slidesPerGroup: 2,
+    },
+  },
+
 
   // Navigation arrows
   navigation: {
