@@ -36,7 +36,7 @@
   &__logo-carousel {
     margin-top: clamp-rem(375, 39, 1536, 64);
     width: 100vw;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     position: relative;
   }
   &__logo-track {
@@ -44,12 +44,14 @@
     gap: clamp-rem(375, 63, 1536, 80);
     flex-wrap: nowrap; // 保険のひとこと
     width: max-content;
-    // animation: scroll-left 5s linear infinite; // scroll-leftの定義はfoundation/_keyframes.scssで行っている
-    transform: translateX(0);
-    --scroll-end: -50%; // これは仮の数字で、実際にはJSから値が代入される
+    // animation: scroll-left 20s linear infinite; // scroll-leftの定義はfoundation/_keyframes.scssで行っている
+    transform: translateX(-50%);
   }
   &__logo-item {
     width: clamp-rem(375, 160, 1536, 248);
     flex-shrink: 0; // clampの指定幅よりも短くなることを明示的に禁止
+  }
+  &__logo {
+    height: clamp-rem(375, 64, 1536, 99);
   }
 }
