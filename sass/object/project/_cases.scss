@@ -21,9 +21,7 @@
   }
   &__slider {
     display: flex;
-    // justify-content: flex-start;
     width: max-content;
-    // gap: rem(70);
     @include media(l) {
       padding-inline: rem(28);
     }
@@ -33,18 +31,16 @@
     padding: rem(32) rem(10) 0;
     border-top-left-radius: rem(30);
     border-bottom-right-radius: rem(30);
-    // max-width: rem(286);
     width: rem(286);
     height: rem(520);
     position: relative;
     @include media(s) {
       height: rem(471);
-      // max-width: rem(311);
       width: rem(311);
     }
     @include media(m) {
       padding: rem(32) rem(20) 0;
-      max-width: rem(405);
+      width: rem(405);
       height: rem(488);
     }
   }
@@ -107,7 +103,6 @@
     }
   }
 }
-
 
 /*
 今の問題点

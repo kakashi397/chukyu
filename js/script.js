@@ -109,8 +109,8 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
   spaceBetween: 70,
-  slidesPerView: 1,
-  slidesPerGroup: 1,
+  centeredSlides: true,
+  slidesPerView: 'auto',
 
   // Navigation arrows
   navigation: {
