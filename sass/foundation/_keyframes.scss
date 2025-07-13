@@ -3,6 +3,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(var(--scroll-end));
+    transform: translateX(-50%); //-51.3%はDevToolで見つけた数字
+
   }
 }

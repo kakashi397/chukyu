@@ -11,6 +11,7 @@
   z-index: 9999;
   top: $header-height;
   translate: 100vw;
+  transition: all 0.6s;
   &__item {
     font-weight: 700;
     color: $white;
@@ -28,5 +29,11 @@
   }
   @include media(l) {
     display: none; // PCでは非表示
+  }
+  &.is-open {
+    translate: 0;
+    @include media(m) {
+      translate: 60vw;
+    }
   }
 }
