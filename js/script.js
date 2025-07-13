@@ -162,6 +162,7 @@ const swiper = new Swiper('.swiper', {
 /*
   現在の書き方は二枚表示の時はカードのwidthをswiperに決めて貰っているslidesPerView：2
 これだとスライドする距離は良いがカードのwidthがカンプよりも大きいのでずれている
+タブレット幅だと崩壊中
   */
 
   // Navigation arrows

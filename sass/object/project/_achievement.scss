@@ -41,7 +41,6 @@
   }
   &__logo-track {
     display: flex;
-    // gap: clamp-rem(375, 63, 1536, 80);
     flex-wrap: nowrap; // 保険のひとこと
     width: max-content;
     animation: scroll-left 20s linear infinite; // scroll-leftの定義はfoundation/_keyframes.scssで行っている
@@ -51,6 +50,9 @@
     width: clamp-rem(375, 160, 1536, 248);
     margin-right: clamp-rem(375, 63, 1536, 80);
     flex-shrink: 0; // clampの指定幅よりも短くなることを明示的に禁止
+    &--first {
+      width: clamp-rem(375, 160, 1536, 224);
+    }
   }
   &__logo {
     height: clamp-rem(375, 64, 1536, 99);
