@@ -112,7 +112,6 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   slidesPerGroup: 1,
 
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -120,4 +119,8 @@ const swiper = new Swiper('.swiper', {
   },
 
 
+});
+swiper.on('slideChange', function () {
+  console.log('現在のインデックス:', swiper.activeIndex);
+  console.log('translate値:', swiper.translate);
 });
