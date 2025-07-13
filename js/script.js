@@ -88,18 +88,60 @@ forms.forEach((form) => { // フォームひとつずつに処理をする
 /* 
 カルーセル
 */
-// const track = document.querySelector('.js-logo-track');
-// if (track) {
-//   // 複製（←これで2セット分に）
-//   track.innerHTML += track.innerHTML;
+const track = document.querySelector('.js-logo-track');
 
-//   // 描画が終わってから幅を正確に測る
-//   requestAnimationFrame(() => {
-//     const oneSetWidth = track.scrollWidth / 2;
-//     track.style.setProperty('--scroll-end', `-${oneSetWidth}px`);
-//     console.log('1セット分の幅:', oneSetWidth);
-//   });
-// }
+// 初期の子要素を保存（1セット分）
+const originalItems = Array.from(track.children);
+
+// 現在の複製数（初期1）
+let currentSetCount = 1;
+
+// 複製と偶数チェック
+function generateEvenSets() {
+  // 一度中身を初期状態に戻す
+  track.innerHTML = '';
+  originalItems.forEach(item => {
+    track.appendChild(item.cloneNode(true));
+  });
+  currentSetCount = 1;
+
+  const screenWidth = window.innerWidth;
+  const trackWrapper = track.parentElement;
+  const requireWidth = screenWidth * 2; // 最低でも画面の2倍分必要
+  let currentWidth = track.scrollWidth;
+
+  // 必要なだけ複製（set単位で）
+  while (currentWidth < requireWidth) {
+    originalItems.forEach(item => {
+      track.appendChild(item.cloneNode(true));
+    });
+    currentSetCount++;
+    currentWidth = track.scrollWidth;
+  }
+
+  // 複製数が奇数なら+1セット追加して偶数に
+  if (currentSetCount % 2 !== 0) {
+    originalItems.forEach(item => {
+      track.appendChild(item.cloneNode(true));
+    });
+    currentSetCount++;
+  }
+}
+
+// 初回実行
+generateEvenSets();
+
+// リサイズ対応（連打防止のdebounceつき）
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    generateEvenSets();
+  }, 300); // 0.3秒後に再生成
+});
+
+
+
 
 /*
 スライダー
