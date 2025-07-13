@@ -106,8 +106,11 @@ forms.forEach((form) => { // フォームひとつずつに処理をする
 */
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'vertical',
+  direction: 'horizontal',
   loop: true,
+  spaceBetween: 70,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
 
 
   // Navigation arrows

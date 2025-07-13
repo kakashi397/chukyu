@@ -23,7 +23,7 @@
     display: flex;
     justify-content: flex-start;
     width: max-content;
-    gap: rem(70);
+    // gap: rem(70);
     @include media(l) {
       padding-inline: rem(28);
     }
