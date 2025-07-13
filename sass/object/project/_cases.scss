@@ -8,7 +8,7 @@
   padding-top: clamp-rem(375, 73, 1536, 96);
   padding-bottom: clamp-rem(375, 45, 1536, 55);
   position: relative;
-  // overflow-x: hidden; わかりやすいように
+  overflow-x: hidden;
   @include media(s) {
     margin-inline: auto;
     max-width: rem(430);
@@ -23,7 +23,9 @@
     display: flex;
     width: max-content;
     @include media(l) {
-      padding-inline: rem(28);
+      // padding-inline: rem(28);
+      padding-left: rem(28);
+      // padding-right: rem(88);
     }
   }
   &__item {
@@ -40,7 +42,7 @@
     }
     @include media(m) {
       padding: rem(32) rem(20) 0;
-      width: rem(405);
+      // width: rem(405);
       height: rem(488);
     }
   }

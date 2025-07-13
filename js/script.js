@@ -113,11 +113,15 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 'auto',
   breakpoints: {
     991: {
+      slidesPerView: 2,
       centeredSlides: false,
       slidesPerGroup: 2,
     },
   },
-
+/*
+  現在の書き方は二枚表示の時はカードのwidthをswiperに決めて貰っているslidesPerView：2
+これだとスライドする距離は良いがカードのwidthがカンプよりも大きいのでずれている
+  */
 
   // Navigation arrows
   navigation: {
@@ -127,6 +131,8 @@ const swiper = new Swiper('.swiper', {
 
 
 });
+
+
 swiper.on('slideChange', function () {
   console.log('現在のインデックス:', swiper.activeIndex);
   console.log('translate値:', swiper.translate);
