@@ -2,7 +2,7 @@
 スムーススクロール
 */
 // ヘッダー縦幅分スクロール量を減らすので、その時に必要
-const header = document.querySelector('.l-header');
+const header = document.querySelector('.js-header');
 // 値の先頭に#を持つ(ページ内リンク)href属性を持つa要素を取得
 const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
 
