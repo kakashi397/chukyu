@@ -32,5 +32,8 @@
   }
   &.is-open {
     translate: 0;
+    @include media(m) {
+      translate: 60vw;
+    }
   }
 }
