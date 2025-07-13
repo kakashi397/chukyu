@@ -29,4 +29,7 @@
   @include media(l) {
     display: none; // PCでは非表示
   }
+  &.is-open {
+    translate: 0;
+  }
 }

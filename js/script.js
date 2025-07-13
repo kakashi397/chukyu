@@ -35,6 +35,21 @@ for (const link of smoothScrollLinks) { // 取得したa要素を個々に定数
 }
 
 
+/* 
+ハンバーガーメニュー
+*/
+const hamburgerBtn = document.querySelector('.js-hamburger-btn');
+console.log(hamburgerBtn);
+const nav = document.querySelector('.js-nav-sp');
+console.log(nav);
+
+hamburgerBtn.addEventListener('click', () => {
+  hamburgerBtn.classList.toggle('is-open');
+});
+
+
+
+
 /*
 フォーム関連
 */
