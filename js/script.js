@@ -39,14 +39,19 @@ for (const link of smoothScrollLinks) { // 取得したa要素を個々に定数
 ハンバーガーメニュー
 */
 const hamburgerBtn = document.querySelector('.js-hamburger-btn');
-console.log(hamburgerBtn);
 const nav = document.querySelector('.js-nav-sp');
-console.log(nav);
+const navLinks = nav.querySelectorAll('a');
 
 hamburgerBtn.addEventListener('click', () => {
   hamburgerBtn.classList.toggle('is-open');
+  nav.classList.toggle('is-open');
 });
-
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('is-open');
+    nav.classList.remove('is-open');
+  });
+});
 
 
 

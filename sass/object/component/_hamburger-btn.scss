@@ -17,6 +17,7 @@
     width: rem(32);
     height: rem(1);
     background-color: $white;
+    transition: transform 0.3s, opacity 0.3s;
     &:nth-of-type(1) {
       top: rem(13);
       &.is-open {
@@ -47,15 +48,15 @@
   }
   &.is-open {
     .c-hamburger-btn__line:nth-of-type(1) {
-      transform: rotate(-45deg);
-      top: rem(23);
+      transform: rotate(-45deg); 
+      top: 23px;
     }
     .c-hamburger-btn__line:nth-of-type(2) {
       opacity: 0;
     }
     .c-hamburger-btn__line:nth-of-type(3) {
       transform: rotate(45deg);
-      top: rem(24);
+      top: 24px;
     }
   }
 }
