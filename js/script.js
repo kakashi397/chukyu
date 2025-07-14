@@ -207,52 +207,23 @@ swiper.on('slideChange', function () {
 /* 
 アコーディオン
 */
-/**
- * アニメーションの時間とイージング 
- */
-const animetionTiming = {
-  duration: 400,
-  easing: 'ease-out',
-};
+const details = document.querySelectorAll('js-details').forEach(details => {
+  details.addEventListener('toggle', event => {
+    const content = details.querySelector('.js-content');
 
-/**
- * アコーディオンを閉じるときのキーフレームを作成
- * @param content {HTMLElement}
- */
-const closingAnimetionKeyframes = (content) => [
-  {
-    height: content.offsetHeight + 'px',
-    opacity: 1,
-  },
-  {
-    height: 0,
-    opacity: 0,
-  },
-];
+    if(details.open) {
+      const keyframes = [
+        {
+          height: '0px', 
+          opacity: 0,
+        },
+        {
+          height: `${content.scrollHeight}px`,
+          opacity: 1,
+        },
+      ];
 
-/** 
- *アコーディオンを開くときのキーフレームを作成
- *@param content {HTMLElement}
- */
-const openingAnimetionKeyframes = (content) => [
-  {
-    height: 0,
-    opacity: 0,
-  },
-  {
-    height: content.offsetHeight + 'px',
-    opacity: 1,
-  },
-];
-
-const detailsList = document.querySelectorAll('.js-details');
-
-detailsList.forEach((details) => {
-  const summary = details.querySelector('.js-summary');
-  const content = details.querySelector('.js-content');
-
-  summary.addEventListener('click', (event) => {
-    event.preventDefault();
+      
+    }
   });
-
 });
