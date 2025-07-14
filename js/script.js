@@ -35,6 +35,7 @@ for (const link of smoothScrollLinks) { // 取得したa要素を個々に定数
 }
 
 
+
 /* 
 ハンバーガーメニュー
 */
@@ -104,6 +105,8 @@ forms.forEach((form) => { // フォームひとつずつに処理をする
     });
   });
 });
+
+
 
 /* 
 カルーセル
@@ -198,4 +201,58 @@ const swiper = new Swiper('.swiper', {
 swiper.on('slideChange', function () {
   console.log('現在のインデックス:', swiper.activeIndex);
   console.log('translate値:', swiper.translate);
+});
+
+
+/* 
+アコーディオン
+*/
+/**
+ * アニメーションの時間とイージング 
+ */
+const animetionTiming = {
+  duration: 400,
+  easing: 'ease-out',
+};
+
+/**
+ * アコーディオンを閉じるときのキーフレームを作成
+ * @param content {HTMLElement}
+ */
+const closingAnimetionKeyframes = (content) => [
+  {
+    height: content.offsetHeight + 'px',
+    opacity: 1,
+  },
+  {
+    height: 0,
+    opacity: 0,
+  },
+];
+
+/** 
+ *アコーディオンを開くときのキーフレームを作成
+ *@param content {HTMLElement}
+ */
+const openingAnimetionKeyframes = (content) => [
+  {
+    height: 0,
+    opacity: 0,
+  },
+  {
+    height: content.offsetHeight + 'px',
+    opacity: 1,
+  },
+];
+
+const detailsList = document.querySelectorAll('.js-details');
+
+detailsList.forEach((details) => {
+  const summary = details.querySelector('.js-summary');
+  const content = details.querySelector('.js-content');
+
+  summary.addEventListener('click', (event) => {
+    event.preventDefault();
+  });
+
 });

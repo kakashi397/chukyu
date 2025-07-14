@@ -25,6 +25,9 @@
     display: flex;
     align-items: center;
   }
+  &__content {
+    overflow: hidden;
+  }
   &__answer {
     padding: clamp-rem(375, 10, 1536, 24) clamp-rem(375, 10, 1536, 36);
     font-size: clamp-rem(375, 14, 1536, 16);
