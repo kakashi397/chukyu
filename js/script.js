@@ -207,23 +207,48 @@ swiper.on('slideChange', function () {
 /* 
 アコーディオン
 */
-const details = document.querySelectorAll('js-details').forEach(details => {
-  details.addEventListener('toggle', event => {
-    const content = details.querySelector('.js-content');
+const details = document.querySelectorAll('.js-details');
+details.forEach((detail) => {
+  const summary = detail.querySelector('.js-summary');
+  const content = detail.querySelector('.js-content');
 
-    if(details.open) {
-      const keyframes = [
+  summary.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if(detail.open) {
+      content.animate([
         {
-          height: '0px', 
+          maxHeight: content.scrollHeight + 'px',
+          opacity: 1,
+        },
+        {
+          maxHeight: '0',
+          opacity: 0,
+        }
+      ],{
+        duration: 300,
+        easing: 'ease-out',
+        }).onfinish = () => {
+          detail.removeAttribute('open');
+          content.style.maxHeight = '';
+        };
+    } else {
+      detail.setAttribute('open', '');
+      content.animate([
+        {
+          maxHeight: '0',
           opacity: 0,
         },
         {
-          height: `${content.scrollHeight}px`,
+          maxHeight: content.scrollHeight + 'px',
           opacity: 1,
         },
-      ];
-
-      
+      ],{
+        duration: 300,
+        easing: 'ease-out',
+      }).onfinish = () => {
+        content.style.maxHeight = '';
+      };
     }
   });
 });
