@@ -35,7 +35,7 @@
   }
   &__logo-carousel {
     margin-top: clamp-rem(375, 39, 1536, 64);
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     position: relative;
   }
