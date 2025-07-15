@@ -37,6 +37,31 @@ for (const link of smoothScrollLinks) { // 取得したa要素を個々に定数
 
 
 /* 
+フェードイン
+*/
+// 監視対象が範囲内に入ったら実行する処理
+const fadeIn = (entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting) {
+      console.log(entry.target);
+    }
+  });
+}; 
+// オブザーバーの設定
+const fadeInObserver = new IntersectionObserver(fadeIn);
+
+// .js-fade-inを監視するよう指示
+const fadeElements = document.querySelectorAll('.js-fade-in');
+fadeElements.forEach((fadeElement) => {
+  fadeInObserver.observe(fadeElement);
+});
+
+
+
+
+
+
+/* 
 ハンバーガーメニュー
 */
 const hamburgerBtn = document.querySelector('.js-hamburger-btn');
@@ -95,7 +120,7 @@ forms.forEach((form) => { // フォームひとつずつに処理をする
       mode: 'no-cors',
       body: formData
     }).then(() => {
-      alert('送信しました！');
+      // alert('送信しました！');
       document.querySelectorAll('.js-submit').forEach(btn => btn.style.display = 'none');
       document.querySelectorAll('.js-thanks').forEach(thanks => thanks.style.display = 'block');
       form.reset();
