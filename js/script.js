@@ -40,10 +40,22 @@ for (const link of smoothScrollLinks) { // 取得したa要素を個々に定数
 フェードイン
 */
 // 監視対象が範囲内に入ったら実行する処理
-const fadeIn = (entries) => {
+const fadeIn = (entries, obs) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting) {
-      console.log(entry.target);
+      entry.target.animate(
+        {
+          opacity: [0, 1],
+          filter: ['blur(.4rem)', 'blur(0)'],
+          translate: ['0 4rem', 0],
+        },
+        {
+          duration: 2000,
+          easing: 'ease',
+          fill: 'forwards',
+        },
+      );
+      obs.unobserve(entry.target);
     }
   });
 }; 
