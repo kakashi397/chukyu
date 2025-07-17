@@ -35,9 +35,9 @@
   }
   &__logo-carousel {
     margin-top: clamp-rem(375, 39, 1536, 64);
-    width: 100%;
+    margin-inline: rem(-16); // セクションが持ってるpaddingを抜け出すため
+    width: calc(100% + #{rem(16)} * 2); // ネガティブマージンの長さも足すことで画面いっぱいにしている
     overflow-x: hidden;
-    position: relative;
   }
   &__logo-track {
     display: flex;
