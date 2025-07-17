@@ -109,11 +109,13 @@ forms.forEach((form) => { // フォームひとつずつに処理をする
     for(const input of inputs) { // 各インプット要素それぞれに処理
       if(input.value.trim() === '') { // インプット内に入力された値が空白なら
         isAllFilled = false; // 変数isAllFilledをfalseに
+        submitBtn.style.backgroundColor = '#A9D0EA';
         break; // 処理を終了する
       }
     }
     if (isAllFilled) { // isAllFilledがtrueなら
       submitBtn.disabled = false; // disabledをfalseにする＝ボタンが使える
+      submitBtn.style.backgroundColor = '#007FC6';
     } else { // isAllFilledがfalseなら
       submitBtn.disabled = true; // disabledがtrueになる＝ボタンが使えなくなる
     }
@@ -208,13 +210,13 @@ window.addEventListener('resize', () => { // ウィンドウのサイズが変�
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  loop: true ,
   spaceBetween: 70,
   centeredSlides: true,
   slidesPerView: 'auto',
   breakpoints: {
     991: {
-      slidesPerView: 2,
+      // slidesPerView: 2,
       centeredSlides: false,
       slidesPerGroup: 2,
     },

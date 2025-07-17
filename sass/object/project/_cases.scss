@@ -22,9 +22,10 @@
   &__slider {
     display: flex;
     width: max-content;
+    margin-inline: auto;
     @include media(l) {
-      // padding-inline: rem(28);
-      padding-left: rem(28);
+      padding-inline: rem(28);
+      // padding-left: rem(28);
       // padding-right: rem(88);
     }
   }
@@ -42,9 +43,12 @@
     }
     @include media(m) {
       padding: rem(32) rem(20) 0;
-      // width: rem(405);
+      width: rem(405);
       height: rem(488);
     }
+    &:last-child {
+  margin-right: 0 !important;
+}
   }
   &__heading {
     color: $black;
