@@ -14,7 +14,7 @@
     max-width: rem(430);
   }
   @include media(m) {
-    max-width: rem(525);
+    max-width: rem(520);
   }
   @include media(l) {
     max-width: rem(1000);
@@ -24,9 +24,7 @@
     width: max-content;
     margin-inline: auto;
     @include media(l) {
-      padding-inline: rem(28);
-      // padding-left: rem(28);
-      // padding-right: rem(88);
+      padding-left: rem(60);
     }
   }
   &__item {
@@ -45,10 +43,8 @@
       padding: rem(32) rem(20) 0;
       width: rem(405);
       height: rem(488);
+      flex-shrink: 0;
     }
-    &:last-child {
-  margin-right: 0 !important;
-}
   }
   &__heading {
     color: $black;
@@ -109,13 +105,3 @@
     }
   }
 }
-
-/*
-今の問題点
-無限スクロールアニメーションの繋目がスムーズじゃない
-ロゴ一枚目の高さがズレている
-
-スライダー
-
-アニメーションが難しすぎる
-*/

@@ -70,9 +70,6 @@ fadeElements.forEach((fadeElement) => {
 
 
 
-
-
-
 /* 
 ハンバーガーメニュー
 */
@@ -216,30 +213,15 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 'auto',
   breakpoints: {
     991: {
-      // slidesPerView: 2,
       centeredSlides: false,
       slidesPerGroup: 2,
     },
   },
-/*
-  現在の書き方は二枚表示の時はカードのwidthをswiperに決めて貰っているslidesPerView：2
-これだとスライドする距離は良いがカードのwidthがカンプよりも大きいのでずれている
-タブレット幅だと崩壊中
-  */
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-
-});
-
-
-swiper.on('slideChange', function () {
-  console.log('現在のインデックス:', swiper.activeIndex);
-  console.log('translate値:', swiper.translate);
 });
 
 

@@ -43,7 +43,10 @@
     display: flex;
     flex-wrap: nowrap; // 保険のひとこと
     width: max-content;
-    animation: scroll-left 20s linear infinite; // scroll-leftの定義はfoundation/_keyframes.scssで行っている
+    animation: scroll-left 20s linear infinite;
+    @include media(l) {
+      animation: scroll-left 30s linear infinite; // scroll-leftの定義はfoundation/_keyframes.scssで行っている
+    }
     transform: translateX(-50%);
   }
   &__logo-item {

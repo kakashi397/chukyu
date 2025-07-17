@@ -41,7 +41,6 @@
     }
   }
   &__notes {
-    // max-width: rem(684);
     @include media(s) {
       width: clamp-rem(375, 311, 1536, 684);
     }
