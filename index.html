@@ -12,7 +12,6 @@
   <link rel="icon" href="img/favicon.png">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="js/script.js"></script>
 </head>
@@ -45,14 +44,14 @@
           </ul>
         </nav>
         <div class="l-header__btns-wrapper">
-          <a href="#download" class="c-request-btn__link">
-            <div class="c-request-btn">
-              <div class="c-request-btn__inner">
+          <div class="c-request-btn">
+            <div class="c-request-btn__inner">
+              <a href="#download" class="c-request-btn__link">
                 <img src="img/mail.svg" alt="資料請求する" class="c-request-btn__img">
                 <span class="c-request-btn__text">資料請求</span>
-              </div>
+              </a>
             </div>
-          </a>
+          </div>
           <button class="c-hamburger-btn js-hamburger-btn" aria-label="メニューを開く">
             <span class="c-hamburger-btn__line"></span>
             <span class="c-hamburger-btn__line"></span>
@@ -129,20 +128,20 @@
               <div class="p-request-form__group">
                 <div class="p-request-form__item">
                   <label for="last-name" class="p-request-form__label p-request-form__label--last-name">姓<sup class="p-request-form__caution">*</sup></label>
-                  <input type="text" id="last-name" name="entry.2008734779" class="p-request-form__input p-request-form__input--name js-input" required placeholder="介護">
+                  <input type="text" id="last-name" name="entry.2008734779" class="p-request-form__input p-request-form__input--name js-input" required autocomplete="family-name" placeholder="介護">
                 </div>
                 <div class="p-request-form__item">
                   <label for="first-name" class="p-request-form__label">名<sup class="p-request-form__caution">*</sup></label>
-                  <input type="text" id="first-name" name="entry.1711133428" class="p-request-form__input p-request-form__input--name js-input" required placeholder="太郎">
+                  <input type="text" id="first-name" name="entry.1711133428" class="p-request-form__input p-request-form__input--name js-input" required autocomplete="given-name" placeholder="太郎">
                 </div>
               </div>
               <div class="p-request-form__item">
                 <label for="company" class="p-request-form__label">会社名<sup class="p-request-form__caution">*</sup></label>
-                <input type="text" id="company" name="entry.1095440439" class="p-request-form__input js-input" required placeholder="株式会社CareSend">
+                <input type="text" id="company" name="entry.1095440439" class="p-request-form__input js-input" required autocomplete="organization" placeholder="株式会社CareSend">
               </div>
               <div class="p-request-form__item">
                 <label for="email" class="p-request-form__label p-request-form__label--email">メールアドレス<sup class="p-request-form__caution">*</sup></label>
-                <input type="email" id="email" name="entry.1060766295" class="p-request-form__input js-input" required placeholder="caresend@caresend.com">
+                <input type="email" id="email" name="entry.1060766295" class="p-request-form__input js-input" required autocomplete="email" placeholder="caresend@caresend.com">
               </div>
               <div class="p-request-form__item p-request-form__item--last">
                 <label for="tel" class="p-request-form__label p-request-form__label--tel">電話番号<sup class="p-request-form__caution">*</sup></label>
@@ -162,7 +161,7 @@
     <section class="p-achievement">
       <div class="l-achievement-wrapper">
         <h3 class="p-achievement__title">多くのお客様に選ばれ続けています</h3>
-        <ul class="l-achievement__metrics-wrapper p-achievement__metrics-inner">
+        <ul class="l-achievement__metrics-wrapper p-achievement__metrics-inner js-fade-in">
           <li class="p-achievement__metric">
             <img src="img/jiseki 1.png" alt="導入企業数累計200社突破" class="p-achievement__img" loading="lazy" width="856" height="292">
           </li>
@@ -170,42 +169,39 @@
             <img src="img/jiseki-02 1.png" alt="継続率99%以上" class="p-achievement__img" loading="lazy" width="856" height="292">
           </li>
         </ul>
-      </div>
-      <div class="p-achievement__logo-carousel">
-        <ul class="p-achievement__logo-track js-logo-track">
-          <li class="p-achievement__logo-item p-achievement__logo-item--first">
-            <img src="img/logo05 1.png" alt="よつば様" class="p-achievement__logo" loading="lazy" width="496" height="198">
-            </a>
-          </li>
-          <li class="p-achievement__logo-item">
-            <img src="img/logo01.png" alt="株式会社インフィニティギア様" class="p-achievement__logo" loading="lazy" width="496" height="198">
-            </a>
-          </li>
-          <li class="p-achievement__logo-item">
-            <img src="img/logo02.png" alt="サイバーアドベンチャーズ株式会社様" class="p-achievement__logo" loading="lazy" width="496" height="198">
-            </a>
-          </li>
-          <li class="p-achievement__logo-item">
-            <img src="img/logo03 1.png" alt="（株）ウェルワークネットワーク様" class="p-achievement__logo" loading="lazy" width="496" height="198">
-            </a>
-          </li>
-          <li class="p-achievement__logo-item">
-            <img src="img/logo04 1.png" alt="くれよん様" class="p-achievement__logo" loading="lazy" width="496" height="198">
-            </a>
-          </li>
-        </ul>
+        <div class="p-achievement__logo-carousel js-fade-in">
+          <ul class="p-achievement__logo-track js-logo-track">
+            <li class="p-achievement__logo-item p-achievement__logo-item--first">
+              <img src="img/logo05 1.png" alt="よつば様" class="p-achievement__logo" loading="lazy" width="496" height="198">
+            </li>
+            <li class="p-achievement__logo-item">
+              <img src="img/logo01.png" alt="株式会社インフィニティギア様" class="p-achievement__logo" loading="lazy" width="496" height="198">
+            </li>
+            <li class="p-achievement__logo-item">
+              <img src="img/logo02.png" alt="サイバーアドベンチャーズ株式会社様" class="p-achievement__logo" loading="lazy" width="496" height="198">
+            </li>
+            <li class="p-achievement__logo-item">
+              <img src="img/logo03 1.png" alt="（株）ウェルワークネットワーク様" class="p-achievement__logo" loading="lazy" width="496" height="198">
+            </li>
+            <li class="p-achievement__logo-item">
+              <img src="img/logo04 1.png" alt="くれよん様" class="p-achievement__logo" loading="lazy" width="496" height="198">
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="p-about">
       <div class="l-about-wrapper">
         <h3 class="c-section-title" id="about"><span class="u-uppercase">c</span>are<span class="u-uppercase">s</span>endについて</h3>
-        <p class="p-about__text">
-          <span class="u-uppercase">c</span>are<span class="u-uppercase">s</span>endは、<br class="u-only-sp">人材不足に悩む介護施設を<br>認定介護福祉士などの<br class="u-only-sp"><strong class="u-color-main u-fz-24-32">高スキル介護人材</strong>の派遣で<br>支えるサービスです。
-        </p>
-        <div class="p-about__underlay">
-          <img src="img/caresend-feature-01-sp 1.png" alt="登録者50,000人以上のデータベースから、派遣依頼の内容に応じた人材を派遣いたします。" class="p-about__img p-about__img--only-sp">
-          <img src="img/caresend-feature-01 1.png" alt="登録者50,000人以上のデータベースから、派遣依頼の内容に応じた人材を派遣いたします。" class="p-about__img p-about__img--only-pc">
+        <div class="js-fade-in">
+          <p class="p-about__text">
+            <span class="u-uppercase">c</span>are<span class="u-uppercase">s</span>endは、<br class="u-only-sp">人材不足に悩む介護施設を<br>認定介護福祉士などの<br class="u-only-sp"><strong class="u-color-main u-fz-24-32">高スキル介護人材</strong>の派遣で<br>支えるサービスです。
+          </p>
+          <div class="p-about__underlay">
+            <img src="img/caresend-feature-01-sp 1.png" alt="登録者50,000人以上のデータベースから、派遣依頼の内容に応じた人材を派遣いたします。" class="p-about__img p-about__img--only-sp">
+            <img src="img/caresend-feature-01 1.png" alt="登録者50,000人以上のデータベースから、派遣依頼の内容に応じた人材を派遣いたします。" class="p-about__img p-about__img--only-pc">
+          </div>
         </div>
       </div>
     </section>
@@ -213,7 +209,7 @@
     <section class="p-feature">
       <div class="l-feature-wrapper">
         <h3 class="c-section-title" id="feature"><span class="u-uppercase">c</span>are<span class="u-uppercase">s</span>endの特徴</h3>
-        <ul class="p-feature__cards l-feature__cards-wrapper">
+        <ul class="p-feature__cards l-feature__cards-wrapper js-fade-in">
           <li class="p-feature__item">
             <img src="img/feature-01 1 1.png" alt="登録者情報のテキスト3枚" class="p-feature__img">
             <h4 class="p-feature__card-title">登録者の内5割が有資格者</h4>
@@ -247,37 +243,37 @@
 
     <section class="p-cases">
       <h3 class="c-section-title" id="cases">導入事例</h3>
-      <div class="l-cases__slider-wrapper swiper">
+      <div class="l-cases__slider-wrapper swiper js-fade-in">
         <ul class="p-cases__slider swiper-wrapper">
           <li class="p-cases__item swiper-slide">
-            <h4 class="p-cases__heading">慢性的な介護士不足が解決し、<br><strong class="u-color-main">優秀な人材</strong>が確保できるように！</h4>
-            <p class="p-cases__description">「<span class="u-uppercase">c</span>are<span class="u-uppercase">s</span>end」の登場で、慢性的な介護士不足に頭を抱える問題が解消しました。優秀な介護スタッフが手軽に利用できるため、施設の運営が安定し、利用者のケアに集中できるようになりました。登録型派遣と紹介予定派遣の両方が選択肢として用意され、利用者のニーズに応えることができるのが素晴らしいです。<br>またプラットフォーム上の登録介護士は、私達が普通に採用していたら絶対に巡り会えなかったであろう<br class="u-only-sp">リーダー人材にも巡り会えましたので、とても満足しています。</p>
-            <img src="img/case01.png" alt="まるもケアセンター" class="p-cases__img">
+              <h4 class="p-cases__heading">慢性的な介護士不足が解決し、<br><strong class="u-color-main">優秀な人材</strong>が確保できるように！</h4>
+              <p class="p-cases__description">「<span class="u-uppercase">c</span>are<span class="u-uppercase">s</span>end」の登場で、慢性的な介護士不足に頭を抱える問題が解消しました。優秀な介護スタッフが手軽に利用できるため、施設の運営が安定し、利用者のケアに集中できるようになりました。登録型派遣と紹介予定派遣の両方が選択肢として用意され、利用者のニーズに応えることができるのが素晴らしいです。<br>またプラットフォーム上の登録介護士は、私達が普通に採用していたら絶対に巡り会えなかったであろう<br class="u-only-sp">リーダー人材にも巡り会えましたので、とても満足しています。</p>
+              <img src="img/case01.png" alt="まるもケアセンター" class="p-cases__img">
           </li>
           <li class="p-cases__item swiper-slide">
-            <h4 class="p-cases__heading">急な欠員補充から<strong class="u-color-main">正社員雇用</strong>に繋がり、大変助かっています。</h4>
-            <p class="p-cases__description">「<span class="u-uppercase">c</span>are<span class="u-uppercase">s</span>end」に急なニーズでも対応可能な介護士さんが登録されていることは、本当に心強かったです。その中でも、派遣していただいた介護士さんはとても素晴らしく、紹介予定派遣を経て正社員として採用することになりました。当該介護士の存在は施設全体にとって大きな価値を<br class="u-only-pc">持っています。<br>今後も積極的に正社員登用を考えておりますので、良い介護士に恵まれることを祈りつつ、利用をさせていただきます。</p>
-            <img src="img/case02.png" alt="からびな介護サービス" class="p-cases__img p-cases__img--2">
+              <h4 class="p-cases__heading">急な欠員補充から<strong class="u-color-main">正社員雇用</strong>に繋がり、大変助かっています。</h4>
+              <p class="p-cases__description">「<span class="u-uppercase">c</span>are<span class="u-uppercase">s</span>end」に急なニーズでも対応可能な介護士さんが登録されていることは、本当に心強かったです。その中でも、派遣していただいた介護士さんはとても素晴らしく、紹介予定派遣を経て正社員として採用することになりました。当該介護士の存在は施設全体にとって大きな価値を<br class="u-only-pc">持っています。<br>今後も積極的に正社員登用を考えておりますので、良い介護士に恵まれることを祈りつつ、利用をさせていただきます。</p>
+              <img src="img/case02.png" alt="からびな介護サービス" class="p-cases__img p-cases__img--2">
           </li>
           <li class="p-cases__item swiper-slide">
-            <h4 class="p-cases__heading"><strong class="u-color-main">ケアの質が向上！</strong> CareSendで利用者満足度も上昇！</h4>
-            <p class="p-cases__description">当施設では、長らく介護士不足に悩まされてきました。ある日、急な欠員が発生し、困り果てていた時に、<br>CareSendを利用することにしました。登録型派遣で急遽派遣してもらった介護士は、驚くほどのプロ意識と思いやりを持ち、施設内での業務をスムーズにこなしてくれました。その後、彼女は紹介予定派遣を経て正式に採用され、施設の一員として活躍しています。彼女の尽力により、施設の雰囲気は一変し、利用者の満足度も大幅に向上しました。</p>
-            <img src="img/case03.png" alt="やすらぎケアハウス" class="p-cases__img p-cases__img--3">
+              <h4 class="p-cases__heading"><strong class="u-color-main">ケアの質が向上！</strong> CareSendで利用者満足度も上昇！</h4>
+              <p class="p-cases__description">当施設では、長らく介護士不足に悩まされてきました。ある日、急な欠員が発生し、困り果てていた時に、<br>CareSendを利用することにしました。登録型派遣で急遽派遣してもらった介護士は、驚くほどのプロ意識と思いやりを持ち、施設内での業務をスムーズにこなしてくれました。その後、彼女は紹介予定派遣を経て正式に採用され、施設の一員として活躍しています。彼女の尽力により、施設の雰囲気は一変し、利用者の満足度も大幅に向上しました。</p>
+              <img src="img/case03.png" alt="やすらぎケアハウス" class="p-cases__img p-cases__img--3">
           </li>
           <li class="p-cases__item swiper-slide">
-            <h4 class="p-cases__heading"><strong class="u-color-main">派遣介護士の質</strong>が高く、とても驚きました。</h4>
-            <p class="p-cases__description">私たちの施設は、長年にわたり正社員だけで運営してきました。派遣の利用は考えたこともありませんでしたが、ある日、急な人手不足に悩まされ、"CareSend"を試してみることにしました。派遣された介護士は、私たちの期待をはるかに超える素晴らしい仕事ぶりでした。プロ意識や親切さに感動し、施設内の雰囲気が一変しました。<br>私たちは派遣介護士の活用に新たな可能性を見出し、今後は更にその先の「採用」につなげていきたく思っています。</p>
-            <img src="img/case04.png" alt="Tridori" class="p-cases__img p-cases__img--4">
+              <h4 class="p-cases__heading"><strong class="u-color-main">派遣介護士の質</strong>が高く、とても驚きました。</h4>
+              <p class="p-cases__description">私たちの施設は、長年にわたり正社員だけで運営してきました。派遣の利用は考えたこともありませんでしたが、ある日、急な人手不足に悩まされ、"CareSend"を試してみることにしました。派遣された介護士は、私たちの期待をはるかに超える素晴らしい仕事ぶりでした。プロ意識や親切さに感動し、施設内の雰囲気が一変しました。<br>私たちは派遣介護士の活用に新たな可能性を見出し、今後は更にその先の「採用」につなげていきたく思っています。</p>
+              <img src="img/case04.png" alt="Tridori" class="p-cases__img p-cases__img--4">
           </li>
         </ul>
       </div>
-      <button class="p-cases__btn p-cases__btn--prev swiper-button-prev"><img src="img/arrow-01.svg" alt=""></button>
-      <button class="p-cases__btn p-cases__btn--next swiper-button-next"><img src="img/arrow-02.svg" alt=""></button>
+      <button class="p-cases__btn p-cases__btn--prev swiper-button-prev js-fade-in"><img src="img/arrow-01.svg" alt=""></button>
+      <button class="p-cases__btn p-cases__btn--next swiper-button-next js-fade-in"><img src="img/arrow-02.svg" alt=""></button>
     </section>
 
     <section class="p-price l-price-wrapper">
       <h3 class="c-section-title" id="price">料金は成約手数料のみ!!</h3>
-      <div class="l-price-content-wrapper">
+      <div class="l-price-content-wrapper js-fade-in">
         <ul class="p-price__cards">
           <li class="p-price__card">
             <div class="p-price__head">初期費用</div>
@@ -302,64 +298,74 @@
     <section class="p-faq">
       <div class="l-faq-wrapper">
         <h3 class="c-section-title" id="faq">よくある質問</h3>
-        <div class="c-accordion l-accordion-wrapper">
-          <details class="c-accordion__question">
-            <summary class="c-accordion__trigger">
+        <div class="c-accordion l-accordion-wrapper js-fade-in">
+          <details class="c-accordion__question js-details">
+            <summary class="c-accordion__trigger js-summary">
               <span class="p-faq__icon">q</span>
               <span class="p-faq__text">登録介護士はどこから確認できますか？</span>
               <span class="p-faq__btn"></span>
             </summary>
-            <p class="c-accordion__answer">CareSendのウェブサイトやアプリを通じて確認することができます。</p>
+            <div class="c-accordion__content js-content">
+              <div class="c-accordion__answer">CareSendのウェブサイトやアプリを通じて確認することができます。</div>
+            </div>
           </details>
-          <details class="c-accordion__question">
-            <summary class="c-accordion__trigger">
+          <details class="c-accordion__question js-details">
+            <summary class="c-accordion__trigger js-summary">
               <span class="p-faq__icon">q</span>
               <span class="p-faq__text">派遣可能エリアはどのようになっていますか？</span>
               <span class="p-faq__btn"></span>
             </summary>
-            <p class="c-accordion__answer">現在、全国の主要都市や地方都市を含む、多くの都道府県でサービスが展開されています。ただし、派遣可能なエリアは随時拡大されているため、最新の情報は資料請求してご確認ください。</p>
+            <div class="c-accordion__content js-content">
+              <div class="c-accordion__answer">現在、全国の主要都市や地方都市を含む、多くの都道府県でサービスが展開されています。ただし、派遣可能なエリアは随時拡大されているため、最新の情報は資料請求してご確認ください。</div>
+            </div>
           </details>
-          <details class="c-accordion__question">
-            <summary class="c-accordion__trigger">
+          <details class="c-accordion__question js-details">
+            <summary class="c-accordion__trigger js-summary">
               <span class="p-faq__icon">q</span>
               <span class="p-faq__text">登録介護士の資格取得などの支援は行っていますか？</span>
               <span class="p-faq__btn"></span>
             </summary>
-            <div class="c-accordion__answer">
-              <p>はい、CareSendでは登録している介護士の資格取得などの支援も行っています。</p>
-              <p>具体的には、以下のような支援を提供しています。</p>
-              <ol class="p-faq__lists">
-                <li class="p-faq__list">1.カウンセリングと情報提供：介護士が資格取得に興味を持っている場合、"CareSend"のカウンセラーが相談に乗り、必要な情報を提供します。</li>
-                <li class="p-faq__list">2.学習サポート：介護士が資格試験を受ける準備をする際には、学習支援や勉強のアドバイスを提供します。必要に応じて、関連する教材や学習リソースの提供も行います。</li>
-                <li class="p-faq__list">3.資格取得補助：介護士が資格試験に合格するための費用や手続きに関する支援を提供します。場合によっては、一部の費用を補助する場合もあります。</li>
-                <li class="p-faq__list">4.研修プログラム："CareSend"が提供する研修プログラムに参加することで、介護士は専門知識やスキルを向上させることができます。これにより、彼らのキャリアの成長を支援します。</li>
-              </ol>
-              <p>CareSendは、介護士がより充実したキャリアを築くための支援を提供し、彼らの専門性と満足度を向上させることに取り組んでいます。</p>
+            <div class="c-accordion__content js-content">
+              <div class="c-accordion__answer">
+                <p>はい、CareSendでは登録している介護士の資格取得などの支援も行っています。</p>
+                <p>具体的には、以下のような支援を提供しています。</p>
+                <ol class="p-faq__lists">
+                  <li class="p-faq__list">1.カウンセリングと情報提供：介護士が資格取得に興味を持っている場合、"CareSend"のカウンセラーが相談に乗り、必要な情報を提供します。</li>
+                  <li class="p-faq__list">2.学習サポート：介護士が資格試験を受ける準備をする際には、学習支援や勉強のアドバイスを提供します。必要に応じて、関連する教材や学習リソースの提供も行います。</li>
+                  <li class="p-faq__list">3.資格取得補助：介護士が資格試験に合格するための費用や手続きに関する支援を提供します。場合によっては、一部の費用を補助する場合もあります。</li>
+                  <li class="p-faq__list">4.研修プログラム："CareSend"が提供する研修プログラムに参加することで、介護士は専門知識やスキルを向上させることができます。これにより、彼らのキャリアの成長を支援します。</li>
+                </ol>
+                <p>CareSendは、介護士がより充実したキャリアを築くための支援を提供し、彼らの専門性と満足度を向上させることに取り組んでいます。</p>
+              </div>
             </div>
           </details>
-          <details class="c-accordion__question">
-            <summary class="c-accordion__trigger">
+          <details class="c-accordion__question js-details">
+            <summary class="c-accordion__trigger js-summary">
               <span class="p-faq__icon">q</span>
               <span class="p-faq__text">派遣の登録介護士を、派遣期間終了後に直接雇用することは可能ですか？</span>
               <span class="p-faq__btn"></span>
             </summary>
-            <p class="c-accordion__answer">はい、派遣期間終了後に直接雇用することは可能です。ただし、一般派遣と紹介予定派遣の場合には異なる手続きがあります。<br>一般派遣の場合、介護士は派遣会社の従業員として派遣されます。派遣期間終了後に直接雇用する場合には、派遣会社と介護施設間で新たな雇用契約を締結する必要があります。この場合、派遣会社に対して雇用の手数料や補償金が発生することがあります。<br>一方、紹介予定派遣の場合、介護士は派遣先で一定期間勤務した後、雇用主（派遣先の介護施設）と直接雇用契約を結ぶことができます。派遣期間終了後に直接雇用する場合、通常は派遣会社に対して雇用の手数料が支払われることがありますが、派遣期間中に雇用契約の条件が明確にされているため、一般派遣よりも手続きがスムーズです。<br>要するに、一般派遣の場合は新たな雇用契約を派遣会社と介護施設間で締結する必要がありますが、紹介予定派遣の場合は介護施設と介護士との直接雇用契約に移行することができます。</p>
+            <div class="c-accordion__content js-content">
+              <div class="c-accordion__answer">はい、派遣期間終了後に直接雇用することは可能です。ただし、一般派遣と紹介予定派遣の場合には異なる手続きがあります。<br>一般派遣の場合、介護士は派遣会社の従業員として派遣されます。派遣期間終了後に直接雇用する場合には、派遣会社と介護施設間で新たな雇用契約を締結する必要があります。この場合、派遣会社に対して雇用の手数料や補償金が発生することがあります。<br>一方、紹介予定派遣の場合、介護士は派遣先で一定期間勤務した後、雇用主（派遣先の介護施設）と直接雇用契約を結ぶことができます。派遣期間終了後に直接雇用する場合、通常は派遣会社に対して雇用の手数料が支払われることがありますが、派遣期間中に雇用契約の条件が明確にされているため、一般派遣よりも手続きがスムーズです。<br>要するに、一般派遣の場合は新たな雇用契約を派遣会社と介護施設間で締結する必要がありますが、紹介予定派遣の場合は介護施設と介護士との直接雇用契約に移行することができます。</div>
+            </div>
           </details>
-          <details class="c-accordion__question">
-            <summary class="c-accordion__trigger">
+          <details class="c-accordion__question js-details">
+            <summary class="c-accordion__trigger js-summary">
               <span class="p-faq__icon">q</span>
               <span class="p-faq__text">CareSendはどのように介護士を選んでいますか？</span>
               <span class="p-faq__btn"></span>
             </summary>
-            <div class="c-accordion__answer"><p>CareSendでは、介護士を選ぶ際に以下の手順を通じて厳密な選考プロセスを行っています</p>
-              <ol class="p-faq__lists">
-                <li class="p-faq__list">1.登録プロセス：介護士は、"CareSend"のウェブサイトやアプリを通じて登録申請を行います。この際に、必要な資格や経験、専門知識などの情報が提供されます。</li>
-                <li class="p-faq__list">2.書類審査：登録申請が受け付けられた後、"CareSend"のチームが提出された書類や情報を審査し、資格や経験の適格性を確認します。</li>
-                <li class="p-faq__list">3.面接：審査に合格した介護士は、面接の機会を得ます。面接では、介護の専門知識やコミュニケーション能力、応対態度などが評価されます。</li>
-                <li class="p-faq__list">4.スキル評価：適格な介護士は、必要に応じて実地でのスキル評価を受けることがあります。これにより、介護スキルやケアの品質を確認します。</li>
-                <li class="p-faq__list">5.登録完了：選考プロセスを通過した介護士は、"CareSend"の登録スタッフとして承認されます。利用者のニーズに応じて、派遣や紹介予定派遣の依頼が介護士に送られます。</li>
-              </ol>
-              <p>このような厳密な選考プロセスを通じて、"CareSend"は高品質な介護スタッフを提供し、利用者の安心と満足度を確保しています。</p>
+            <div class="c-accordion__content js-content">
+              <div class="c-accordion__answer"><p>CareSendでは、介護士を選ぶ際に以下の手順を通じて厳密な選考プロセスを行っています</p>
+                <ol class="p-faq__lists">
+                  <li class="p-faq__list">1.登録プロセス：介護士は、"CareSend"のウェブサイトやアプリを通じて登録申請を行います。この際に、必要な資格や経験、専門知識などの情報が提供されます。</li>
+                  <li class="p-faq__list">2.書類審査：登録申請が受け付けられた後、"CareSend"のチームが提出された書類や情報を審査し、資格や経験の適格性を確認します。</li>
+                  <li class="p-faq__list">3.面接：審査に合格した介護士は、面接の機会を得ます。面接では、介護の専門知識やコミュニケーション能力、応対態度などが評価されます。</li>
+                  <li class="p-faq__list">4.スキル評価：適格な介護士は、必要に応じて実地でのスキル評価を受けることがあります。これにより、介護スキルやケアの品質を確認します。</li>
+                  <li class="p-faq__list">5.登録完了：選考プロセスを通過した介護士は、"CareSend"の登録スタッフとして承認されます。利用者のニーズに応じて、派遣や紹介予定派遣の依頼が介護士に送られます。</li>
+                </ol>
+                <p>このような厳密な選考プロセスを通じて、"CareSend"は高品質な介護スタッフを提供し、利用者の安心と満足度を確保しています。</p>
+              </div>
             </div>
           </details>
         </div>
@@ -369,7 +375,7 @@
     <section class="p-download">
       <div class="l-download-wrapper">
         <h3 class="p-download__head" id="download">介護派遣に関する資料を<br class="u-only-sp">無料でダウンロード</h3>
-        <div class="p-download__body">
+        <div class="p-download__body js-fade-in">
           <div class="p-download__content">
             <p class="p-download__text">CareSendに興味をお持ち頂き、ありがとうございます。<br class="u-hidden-pc">本フォームを送信頂きますと、サービス資料を送付させていただきます。</p>
             <div class="p-download__imgs">
@@ -383,20 +389,20 @@
               <div class="p-request-form__group">
                 <div class="p-request-form__item">
                   <label for="last-name" autocomplete="family-name" class="p-request-form__label p-request-form__label--last-name">姓<sup class="p-request-form__caution">*</sup></label>
-                  <input type="text" id="last-name" name="entry.2008734779" class="p-request-form__input p-request-form__input--name js-input" required placeholder="介護">
+                  <input type="text" id="last-name" name="entry.2008734779" class="p-request-form__input p-request-form__input--name js-input" required autocomplete="family-name" placeholder="介護">
                 </div>
                 <div class="p-request-form__item">
                   <label for="first-name" autocomplete="given-name" class="p-request-form__label">名<sup class="p-request-form__caution">*</sup></label>
-                  <input type="text" id="first-name" name="entry.1711133428" class="p-request-form__input p-request-form__input--name js-input" required placeholder="太郎">
+                  <input type="text" id="first-name" name="entry.1711133428" class="p-request-form__input p-request-form__input--name js-input" required autocomplete="given-name" placeholder="太郎">
                 </div>
               </div>
               <div class="p-request-form__item">
                 <label for="company" class="p-request-form__label">会社名<sup class="p-request-form__caution">*</sup></label>
-                <input type="text" id="company" name="entry.1095440439" class="p-request-form__input js-input" required placeholder="株式会社CareSend">
+                <input type="text" id="company" name="entry.1095440439" class="p-request-form__input js-input" required autocomplete="organization" placeholder="株式会社CareSend">
               </div>
               <div class="p-request-form__item">
                 <label for="email" class="p-request-form__label p-request-form__label--email">メールアドレス<sup class="p-request-form__caution">*</sup></label>
-                <input type="email" id="email" name="entry.1060766295" class="p-request-form__input js-input" required placeholder="caresend@caresend.com">
+                <input type="email" id="email" name="entry.1060766295" class="p-request-form__input js-input" required autocomplete="email" placeholder="caresend@caresend.com">
               </div>
               <div class="p-request-form__item p-request-form__item--last">
                 <label for="tel" class="p-request-form__label p-request-form__label--tel">電話番号<sup class="p-request-form__caution">*</sup></label>

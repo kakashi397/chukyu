@@ -4,13 +4,13 @@
 
 /* ダウンロードCTA */
 .p-download-cta {
-  background-image: url(/img/background-4876988_1280\ 1.png);
+  background-image: url(/img/ctabackground.png);
   background-size: cover;
   background-position: 45% center;
   background-color: $main;//背景画像が読み込まれなかったときに保険
   padding: rem(40) 0;
   text-align: center;
-  @include media(m) {
+  @include media(m) { 
     padding: rem(59) 0 rem(61);
   }
   &__inner {

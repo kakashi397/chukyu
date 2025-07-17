@@ -35,6 +35,41 @@ for (const link of smoothScrollLinks) { // 取得したa要素を個々に定数
 }
 
 
+
+/* 
+フェードイン
+*/
+// 監視対象が範囲内に入ったら実行する処理
+const fadeIn = (entries, obs) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting) {
+      entry.target.animate(
+        {
+          opacity: [0, 1],
+          filter: ['blur(.4rem)', 'blur(0)'],
+          translate: ['0 3rem', 0],
+        },
+        {
+          duration: 2000,
+          easing: 'ease',
+          fill: 'forwards',
+        },
+      );
+      obs.unobserve(entry.target);
+    }
+  });
+}; 
+// オブザーバーの設定
+const fadeInObserver = new IntersectionObserver(fadeIn);
+
+// .js-fade-inを監視するよう指示
+const fadeElements = document.querySelectorAll('.js-fade-in');
+fadeElements.forEach((fadeElement) => {
+  fadeInObserver.observe(fadeElement);
+});
+
+
+
 /* 
 ハンバーガーメニュー
 */
@@ -71,11 +106,13 @@ forms.forEach((form) => { // フォームひとつずつに処理をする
     for(const input of inputs) { // 各インプット要素それぞれに処理
       if(input.value.trim() === '') { // インプット内に入力された値が空白なら
         isAllFilled = false; // 変数isAllFilledをfalseに
+        submitBtn.style.backgroundColor = '#A9D0EA';
         break; // 処理を終了する
       }
     }
     if (isAllFilled) { // isAllFilledがtrueなら
       submitBtn.disabled = false; // disabledをfalseにする＝ボタンが使える
+      submitBtn.style.backgroundColor = '#007FC6';
     } else { // isAllFilledがfalseなら
       submitBtn.disabled = true; // disabledがtrueになる＝ボタンが使えなくなる
     }
@@ -94,7 +131,7 @@ forms.forEach((form) => { // フォームひとつずつに処理をする
       mode: 'no-cors',
       body: formData
     }).then(() => {
-      alert('送信しました！');
+      // alert('送信しました！');
       document.querySelectorAll('.js-submit').forEach(btn => btn.style.display = 'none');
       document.querySelectorAll('.js-thanks').forEach(thanks => thanks.style.display = 'block');
       form.reset();
@@ -104,6 +141,8 @@ forms.forEach((form) => { // フォームひとつずつに処理をする
     });
   });
 });
+
+
 
 /* 
 カルーセル
@@ -168,34 +207,69 @@ window.addEventListener('resize', () => { // ウィンドウのサイズが変�
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  loop: true ,
   spaceBetween: 70,
   centeredSlides: true,
   slidesPerView: 'auto',
   breakpoints: {
     991: {
-      slidesPerView: 2,
       centeredSlides: false,
       slidesPerGroup: 2,
     },
   },
-/*
-  現在の書き方は二枚表示の時はカードのwidthをswiperに決めて貰っているslidesPerView：2
-これだとスライドする距離は良いがカードのwidthがカンプよりも大きいのでずれている
-タブレット幅だと崩壊中
-  */
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-
 });
 
 
-swiper.on('slideChange', function () {
-  console.log('現在のインデックス:', swiper.activeIndex);
-  console.log('translate値:', swiper.translate);
+/* 
+アコーディオン
+*/
+const details = document.querySelectorAll('.js-details');
+details.forEach((detail) => {
+  const summary = detail.querySelector('.js-summary');
+  const content = detail.querySelector('.js-content');
+
+  summary.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if(detail.open) {
+      content.animate([
+        {
+          maxHeight: content.scrollHeight + 'px',
+          opacity: 1,
+        },
+        {
+          maxHeight: '0',
+          opacity: 0,
+        }
+      ],{
+        duration: 300,
+        easing: 'ease-out',
+        }).onfinish = () => {
+          detail.removeAttribute('open');
+          content.style.maxHeight = '';
+        };
+    } else {
+      detail.setAttribute('open', '');
+      content.animate([
+        {
+          maxHeight: '0',
+          opacity: 0,
+        },
+        {
+          maxHeight: content.scrollHeight + 'px',
+          opacity: 1,
+        },
+      ],{
+        duration: 300,
+        easing: 'ease-out',
+      }).onfinish = () => {
+        content.style.maxHeight = '';
+      };
+    }
+  });
 });
