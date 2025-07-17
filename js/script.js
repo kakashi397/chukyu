@@ -47,7 +47,7 @@ const fadeIn = (entries, obs) => {
         {
           opacity: [0, 1],
           filter: ['blur(.4rem)', 'blur(0)'],
-          translate: ['0 4rem', 0],
+          translate: ['0 3rem', 0],
         },
         {
           duration: 2000,
