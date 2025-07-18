@@ -22,6 +22,7 @@
     border-top: clamp-rem(375, 6, 1536, 12) solid $main;
     text-align: center;
     padding: clamp-rem(375, 8, 1536, 31) 0 clamp-rem(375, 8, 1536, 90);
+    background-color: $white;
   }
   &__head {
     color: $black;
